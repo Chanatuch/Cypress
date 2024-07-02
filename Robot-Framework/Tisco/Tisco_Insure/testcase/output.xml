@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.9 on win32)" generated="20230627 11:21:51.489" rpa="false" schemaversion="3">
+<suite id="s1" name="Test App No" source="\\hovdifssv.tisconet.com\hovdipsm01$\zpatomtong\My Documents\Tisco_Insure\testcase\test_app_no.robot">
+<test id="s1-t1" name="test dataset" line="5">
+<kw name="Test dataset zcp" library="request">
+<arg>12306270000000003</arg>
+<kw name="Send api request lead notify and return response" library="request">
+<var>${response}</var>
+<arg>${track_number}</arg>
+<kw name="Set up body" library="request">
+<arg>${track_number}</arg>
+<kw name="Replace String" library="String">
+<var>${body_query2}</var>
+<arg>${body_query}</arg>
+<arg>@number@</arg>
+<arg>${track_number}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230627 11:21:53.637" level="INFO">${body_query2} = select _61,_62 from 1_2030 where _80005 = 2 and _6260 = "12306270000000003"</msg>
+<status status="PASS" starttime="20230627 11:21:53.634" endtime="20230627 11:21:53.637"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${option}</var>
+<arg>limit=${400}</arg>
+<arg>start=${1}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230627 11:21:53.645" level="INFO">${option} = {'limit': 400, 'start': 1}</msg>
+<status status="PASS" starttime="20230627 11:21:53.637" endtime="20230627 11:21:53.645"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${request_data}</var>
+<arg>query=${body_query2}</arg>
+<arg>$option=${option}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230627 11:21:53.648" level="INFO">${request_data} = {'query': 'select _61,_62 from 1_2030 where _80005 = 2 and _6260 = "12306270000000003"', '$option': {'limit': 400, 'start': 1}}</msg>
+<status status="PASS" starttime="20230627 11:21:53.646" endtime="20230627 11:21:53.648"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>request_data=${request_data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230627 11:21:53.649" level="INFO">${body} = {'request_data': {'query': 'select _61,_62 from 1_2030 where _80005 = 2 and _6260 = "12306270000000003"', '$option': {'limit': 400, 'start': 1}}}</msg>
+<status status="PASS" starttime="20230627 11:21:53.648" endtime="20230627 11:21:53.649"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${body}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230627 11:21:53.651" level="INFO">${body} = {'request_data': {'query': 'select _61,_62 from 1_2030 where _80005 = 2 and _6260 = "12306270000000003"', '$option': {'limit': 400, 'start': 1}}}</msg>
+<status status="PASS" starttime="20230627 11:21:53.650" endtime="20230627 11:21:53.651"/>
+</kw>
+<status status="PASS" starttime="20230627 11:21:53.632" endtime="20230627 11:21:53.651"/>
+</kw>
+<kw name="Set up header" library="request">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${data_set.header}</var>
+<arg>Content-Type=${header.content_type}</arg>
+<arg>app-meta=${header.app_meta}</arg>
+<arg>client_id=${header.client_id}</arg>
+<arg>client_secret=${header.client_secret}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230627 11:21:53.663" level="INFO">${data_set.header} = {'Content-Type': 'application/json', 'app-meta': '{"user_id":"22cef230-560d-4484-9673-9699ea517ecf", "user_name":"chanakanl@tisco.co.th", "request_datetime":"08/07/2019 10:00:21", "log_session_id":"ff...</msg>
+<status status="PASS" starttime="20230627 11:21:53.653" endtime="20230627 11:21:53.664"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${data_set.header}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230627 11:21:53.666" level="INFO">${data_set.header} = {'Content-Type': 'application/json', 'app-meta': '{"user_id":"22cef230-560d-4484-9673-9699ea517ecf", "user_name":"chanakanl@tisco.co.th", "request_datetime":"08/07/2019 10:00:21", "log_session_id":"ff...</msg>
+<status status="PASS" starttime="20230627 11:21:53.665" endtime="20230627 11:21:53.666"/>
+</kw>
+<status status="PASS" starttime="20230627 11:21:53.652" endtime="20230627 11:21:53.666"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>alias=mysession</arg>
+<arg>url=${url_dataset}</arg>
+<arg>headers=${data_set.header}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230627 11:21:53.667" level="INFO">Creating Session using : alias=mysession, url=https://api-v1-service.c1-beta-tiscogroup.com/public/data-v3-service/state2/dep-api/journal/query, headers={'Content-Type': 'application/json', 'app-meta': '{"user_id":"22cef230-560d-4484-9673-9699ea517ecf", "user_name":"chanakanl@tisco.co.th", "request_datetime":"08/07/2019 10:00:21", "log_session_id":"fffcc966-73ca-4bce-a8e4-bb81f1bd256e", "sub_state":"state2", "app_code":"" , "ip":""}', 'client_id': '1380dd63a996465fbbf636c3345e9621', 'client_secret': '874EeE1CEA5a4826AA3a0b8d1146810d'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230627 11:21:53.666" endtime="20230627 11:21:53.668"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>alias=mysession</arg>
+<arg>url=${url_dataset}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${data_set.header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20230627 11:21:54.858" level="INFO">POST Request : url=https://api-v1-service.c1-beta-tiscogroup.com/public/data-v3-service/state2/dep-api/journal/query 
+ path_url=/public/data-v3-service/state2/dep-api/journal/query 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'app-meta': '{"user_id":"22cef230-560d-4484-9673-9699ea517ecf", "user_name":"chanakanl@tisco.co.th", "request_datetime":"08/07/2019 10:00:21", "log_session_id":"fffcc966-73ca-4bce-a8e4-bb81f1bd256e", "sub_state":"state2", "app_code":"" , "ip":""}', 'client_id': '1380dd63a996465fbbf636c3345e9621', 'client_secret': '874EeE1CEA5a4826AA3a0b8d1146810d', 'Content-Length': '147'} 
+ body=b'{"request_data": {"query": "select _61,_62 from 1_2030 where _80005 = 2 and _6260 = \\"12306270000000003\\"", "$option": {"limit": 400, "start": 1}}}' 
+ </msg>
+<msg timestamp="20230627 11:21:54.858" level="INFO">POST Response : url=https://api-v1-service.c1-beta-tiscogroup.com/public/data-v3-service/state2/dep-api/journal/query 
+ status=200, reason= 
+ headers={'Date': 'Tue, 27 Jun 2023 04:21:55 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'x-requested-with, Content-Type', 'Set-Cookie': 'JSESSIONID=5AADE51A2F9F663D74D9920582F69488; Path=/dep-api; HttpOnly', 'vary': 'accept-encoding', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000;', 'Referrer-Policy': 'no-referrer;', 'Content-Security-Policy': "default-src 'self';", 'X-Content-Type-Options': 'nosniff;'} 
+ body={"dataset_name":"1_2030","hits":1,"msg_code":"30000","msg_detail":"Success","response_data":[{"ACTION_BY":"myptsvc@tisco.co.th","ACTION_DATE":1687839519567,"ACTION_ID":"myptsvc@tisco.co.th","LAST_UPDATE":1687839520261,"_61":1687885200000,"_62":1719421200000,"_id":"EF67B70F-60A3-433D-9C7A-C5F41B9873D4","app_no":124,"flow_session_id":null,"record_link_id":"707B38AB-030D-4DDA-8EC1-9E5991A3AB56"}],"track_id":"5AADE51A2F9F663D74D9920582F69488"} 
+ </msg>
+<msg timestamp="20230627 11:21:54.858" level="INFO">c:\program files\python37\lib\site-packages\urllib3\connectionpool.py:1052: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-v1-service.c1-beta-tiscogroup.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,</msg>
+<msg timestamp="20230627 11:21:54.864" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230627 11:21:53.669" endtime="20230627 11:21:54.864"/>
+</kw>
+<msg timestamp="20230627 11:21:54.872" level="INFO">${response} = {'dataset_name': '1_2030', 'hits': 1, 'msg_code': '30000', 'msg_detail': 'Success', 'response_data': [{'ACTION_BY': 'myptsvc@tisco.co.th', 'ACTION_DATE': 1687839519567, 'ACTION_ID': 'myptsvc@tisco.co....</msg>
+<status status="PASS" starttime="20230627 11:21:53.631" endtime="20230627 11:21:54.872"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230627 11:21:54.875" level="INFO">{'dataset_name': '1_2030', 'hits': 1, 'msg_code': '30000', 'msg_detail': 'Success', 'response_data': [{'ACTION_BY': 'myptsvc@tisco.co.th', 'ACTION_DATE': 1687839519567, 'ACTION_ID': 'myptsvc@tisco.co.th', 'LAST_UPDATE': 1687839520261, '_61': 1687885200000, '_62': 1719421200000, '_id': 'EF67B70F-60A3-433D-9C7A-C5F41B9873D4', 'app_no': 124, 'flow_session_id': None, 'record_link_id': '707B38AB-030D-4DDA-8EC1-9E5991A3AB56'}], 'track_id': '5AADE51A2F9F663D74D9920582F69488'}</msg>
+<status status="PASS" starttime="20230627 11:21:54.873" endtime="20230627 11:21:54.875"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}[response_data][0][_61]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230627 11:21:54.877" level="INFO">1687885200000</msg>
+<status status="PASS" starttime="20230627 11:21:54.876" endtime="20230627 11:21:54.877"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}[response_data][0][_62]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230627 11:21:54.878" level="INFO">1719421200000</msg>
+<status status="PASS" starttime="20230627 11:21:54.877" endtime="20230627 11:21:54.878"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${_61_second}</var>
+<arg>${response}[response_data][0][_61]/1000</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230627 11:21:54.880" level="INFO">${_61_second} = 1687885200.0</msg>
+<status status="PASS" starttime="20230627 11:21:54.879" endtime="20230627 11:21:54.880"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${_62_second}</var>
+<arg>${response}[response_data][0][_62]/1000</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230627 11:21:54.884" level="INFO">${_62_second} = 1719421200.0</msg>
+<status status="PASS" starttime="20230627 11:21:54.882" endtime="20230627 11:21:54.884"/>
+</kw>
+<kw name="Convert Milliseconds To Date" library="date_time">
+<var>${date_time}</var>
+<arg>${_61_second}</arg>
+<msg timestamp="20230627 11:21:54.886" level="INFO">${date_time} = 2023-06-28 00:00:00</msg>
+<status status="PASS" starttime="20230627 11:21:54.885" endtime="20230627 11:21:54.886"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${date_time}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230627 11:21:54.889" level="INFO">2023-06-28 00:00:00</msg>
+<status status="PASS" starttime="20230627 11:21:54.888" endtime="20230627 11:21:54.889"/>
+</kw>
+<kw name="Convert Milliseconds To Date" library="date_time">
+<var>${date_time}</var>
+<arg>${_62_second}</arg>
+<msg timestamp="20230627 11:21:54.891" level="INFO">${date_time} = 2024-06-27 00:00:00</msg>
+<status status="PASS" starttime="20230627 11:21:54.889" endtime="20230627 11:21:54.891"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${date_time}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230627 11:21:54.893" level="INFO">2024-06-27 00:00:00</msg>
+<status status="PASS" starttime="20230627 11:21:54.892" endtime="20230627 11:21:54.893"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${insure_day}</var>
+<arg>(${response}[response_data][0][_62]-${response}[response_data][0][_61])/86400000</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230627 11:21:54.895" level="INFO">${insure_day} = 365.0</msg>
+<status status="PASS" starttime="20230627 11:21:54.894" endtime="20230627 11:21:54.895"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${insure_day}</arg>
+<arg>${366}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20230627 11:21:54.901" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<msg timestamp="20230627 11:21:54.902" level="FAIL">365.0 != 366</msg>
+<status status="FAIL" starttime="20230627 11:21:54.896" endtime="20230627 11:21:54.902"/>
+</kw>
+<status status="FAIL" starttime="20230627 11:21:53.629" endtime="20230627 11:21:54.903"/>
+</kw>
+<status status="FAIL" starttime="20230627 11:21:53.626" endtime="20230627 11:21:54.907">365.0 != 366</status>
+</test>
+<status status="FAIL" starttime="20230627 11:21:51.506" endtime="20230627 11:21:54.914"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test App No">Test App No</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

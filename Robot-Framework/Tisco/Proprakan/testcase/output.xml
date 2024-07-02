@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.9 on win32)" generated="20230623 10:49:18.842" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Zap" source="\\hovdifssv.tisconet.com\hovdipsm01$\zpatomtong\My Documents\Proprakan\testcase\test_zap.robot">
+<test id="s1-t1" name="zap proprakan website" line="7">
+<kw name="Open tisco website" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://myprotection-proprakan-state2.tbeta.co/buy-insurance</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230623 10:49:22.127" level="INFO">Opening browser 'Chrome' to base url 'https://myprotection-proprakan-state2.tbeta.co/buy-insurance'.</msg>
+<status status="PASS" starttime="20230623 10:49:22.125" endtime="20230623 10:49:34.069"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>${1366}</arg>
+<arg>${700}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20230623 10:49:34.070" endtime="20230623 10:49:34.358"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:22.122" endtime="20230623 10:49:34.358"/>
+</kw>
+<kw name="Select zap and fill information" library="select_insurance_feature">
+<arg>${test_zap.birthdate.day}</arg>
+<arg>${test_zap.birthdate.month}</arg>
+<arg>${test_zap.birthdate.year}</arg>
+<kw name="Wait for page load" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230623 10:49:37.383" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230623 10:49:34.381" endtime="20230623 10:49:37.384"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:34.379" endtime="20230623 10:49:37.384"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230623 10:49:40.387" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230623 10:49:37.387" endtime="20230623 10:49:40.387"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:37.385" endtime="20230623 10:49:40.388"/>
+</kw>
+<kw name="Switch to window with url" library="common">
+<arg>https://insure.proprakan.com/buy-insurance?utm_source=web_proprakan&amp;utm_medium=cancer_home&amp;utm_campaign=plan1</arg>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${all_window}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230623 10:49:40.408" level="INFO">${all_window} = ['CDwindow-A867140F7CEC7E3E952EEC3B0285C728']</msg>
+<status status="PASS" starttime="20230623 10:49:40.394" endtime="20230623 10:49:40.409"/>
+</kw>
+<for flavor="IN">
+<var>${handle}</var>
+<value>@{all_window}</value>
+<iter>
+<var name="${handle}">CDwindow-A867140F7CEC7E3E952EEC3B0285C728</var>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handle}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230623 10:49:40.411" endtime="20230623 10:49:40.478"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230623 10:49:40.576" level="INFO">${current_url} = https://myprotection-proprakan-state2.tbeta.co/buy-insurance</msg>
+<status status="PASS" starttime="20230623 10:49:40.478" endtime="20230623 10:49:40.576"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${current_url}&quot;==&quot;${url}&quot;">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handle}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230623 10:49:40.579" endtime="20230623 10:49:40.579"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" starttime="20230623 10:49:40.580" endtime="20230623 10:49:40.580"/>
+</kw>
+<status status="NOT RUN" starttime="20230623 10:49:40.577" endtime="20230623 10:49:40.580"/>
+</branch>
+<status status="PASS" starttime="20230623 10:49:40.576" endtime="20230623 10:49:40.581"/>
+</if>
+<status status="PASS" starttime="20230623 10:49:40.410" endtime="20230623 10:49:40.581"/>
+</iter>
+<status status="PASS" starttime="20230623 10:49:40.409" endtime="20230623 10:49:40.581"/>
+</for>
+<status status="PASS" starttime="20230623 10:49:40.388" endtime="20230623 10:49:40.581"/>
+</kw>
+<kw name="Click accept cookie" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.accept_cookie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:40.582" endtime="20230623 10:49:40.689"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.accept_cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:40.692" level="INFO">Clicking element 'xpath=//button[contains(text(),"ยอมรับ")]'.</msg>
+<status status="PASS" starttime="20230623 10:49:40.690" endtime="20230623 10:49:40.936"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:40.582" endtime="20230623 10:49:40.936"/>
+</kw>
+<kw name="Click accept terms and condition" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.accept_terms_and_condition}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:40.938" endtime="20230623 10:49:41.081"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.accept_terms_and_condition}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:41.083" level="INFO">Clicking element 'xpath=//button[text()="ตกลง"]'.</msg>
+<status status="PASS" starttime="20230623 10:49:41.082" endtime="20230623 10:49:41.235"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:40.937" endtime="20230623 10:49:41.235"/>
+</kw>
+<kw name="Scroll down" library="common">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0,450)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230623 10:49:41.239" level="INFO">Executing JavaScript:
+window.scrollBy(0,450)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230623 10:49:41.237" endtime="20230623 10:49:41.258"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:41.236" endtime="20230623 10:49:41.259"/>
+</kw>
+<kw name="Click select product" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.select_product}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:41.261" endtime="20230623 10:49:41.428"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.select_product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:41.442" level="INFO">Clicking element 'xpath=//select[@id="products"]'.</msg>
+<status status="PASS" starttime="20230623 10:49:41.439" endtime="20230623 10:49:41.832"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:41.259" endtime="20230623 10:49:41.833"/>
+</kw>
+<kw name="Click zero accident" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.zero_accident_product_option}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:41.835" endtime="20230623 10:49:42.016"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.zero_accident_product_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:42.021" level="INFO">Clicking element 'xpath=//option[contains(text(),"TISCO Zero Accident")]'.</msg>
+<status status="PASS" starttime="20230623 10:49:42.017" endtime="20230623 10:49:42.163"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:41.833" endtime="20230623 10:49:42.164"/>
+</kw>
+<kw name="Click self insurance" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.self_insurance}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:42.166" endtime="20230623 10:49:43.262"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.self_insurance}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:43.262" level="INFO">Clicking element 'xpath=//label[contains(text(), 'ตนเอง')]'.</msg>
+<status status="PASS" starttime="20230623 10:49:43.262" endtime="20230623 10:49:43.768"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:42.165" endtime="20230623 10:49:43.768"/>
+</kw>
+<kw name="Click male" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.male}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:43.771" endtime="20230623 10:49:43.877"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.male}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:43.879" level="INFO">Clicking element 'xpath=//label[contains(text(), 'ชาย')]'.</msg>
+<status status="PASS" starttime="20230623 10:49:43.878" endtime="20230623 10:49:44.082"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:43.769" endtime="20230623 10:49:44.083"/>
+</kw>
+<kw name="Select day" library="select_insurance_page">
+<arg>${day}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_insurance_page.day}</arg>
+<arg>${day}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230623 10:49:44.087" level="INFO">Selecting options from selection list 'xpath=//select[@name="birthDate[0]"]' by value 10.</msg>
+<status status="PASS" starttime="20230623 10:49:44.084" endtime="20230623 10:49:44.477"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:44.083" endtime="20230623 10:49:44.477"/>
+</kw>
+<kw name="Select month" library="select_insurance_page">
+<arg>${month}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_insurance_page.month}</arg>
+<arg>${month}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230623 10:49:44.482" level="INFO">Selecting options from selection list 'xpath=//select[@name="birthDate[1]"]' by value 4.</msg>
+<status status="PASS" starttime="20230623 10:49:44.480" endtime="20230623 10:49:44.897"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:44.478" endtime="20230623 10:49:44.898"/>
+</kw>
+<kw name="Select year" library="select_insurance_page">
+<arg>${year}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_insurance_page.year}</arg>
+<arg>${year}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230623 10:49:44.903" level="INFO">Selecting options from selection list 'xpath=//select[@name="birthDate[2]"]' by value 1997.</msg>
+<status status="PASS" starttime="20230623 10:49:44.900" endtime="20230623 10:49:45.260"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:44.898" endtime="20230623 10:49:45.261"/>
+</kw>
+<kw name="Click search insurance" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.search_insurance}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:45.262" endtime="20230623 10:49:45.338"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.search_insurance}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:45.340" level="INFO">Clicking element 'xpath=//button[contains(text(),'ค้นหาเเบบประกันที่ใช่')]'.</msg>
+<status status="PASS" starttime="20230623 10:49:45.338" endtime="20230623 10:49:45.545"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:45.261" endtime="20230623 10:49:45.545"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230623 10:49:48.549" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230623 10:49:45.547" endtime="20230623 10:49:48.549"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:45.546" endtime="20230623 10:49:48.550"/>
+</kw>
+<kw name="Click first plan" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.first_plan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:48.552" endtime="20230623 10:49:48.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.first_plan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:48.630" level="INFO">Clicking element 'xpath=//h3[contains(text(),'Plan 1')]/..'.</msg>
+<status status="PASS" starttime="20230623 10:49:48.629" endtime="20230623 10:49:48.819"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:48.550" endtime="20230623 10:49:48.820"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230623 10:49:51.824" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230623 10:49:48.822" endtime="20230623 10:49:51.824"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:48.821" endtime="20230623 10:49:51.824"/>
+</kw>
+<kw name="Scroll to next step button" library="select_insurance_page">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230623 10:49:51.826" level="INFO">Executing JavaScript:
+window.scrollTo(0,2200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230623 10:49:51.825" endtime="20230623 10:49:51.886"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:51.824" endtime="20230623 10:49:51.887"/>
+</kw>
+<kw name="Click next step" library="select_insurance_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_insurance_page.proceed_to_fill_information}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 10:49:51.889" endtime="20230623 10:49:52.014"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_insurance_page.proceed_to_fill_information}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 10:49:52.018" level="INFO">Clicking element 'xpath=//button[contains(text(),'ขั้นตอนต่อไป')]'.</msg>
+<status status="PASS" starttime="20230623 10:49:52.015" endtime="20230623 10:49:53.280"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:51.888" endtime="20230623 10:49:53.281"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240228 10:49:54.001" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230623 10:49:53.284" endtime="20240228 10:49:54.003"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:53.283" endtime="20240228 10:49:54.004"/>
+</kw>
+<status status="PASS" starttime="20230623 10:49:34.361" endtime="20240228 10:49:54.006"/>
+</kw>
+<kw name="Fill zap information" library="fill_information_feature">
+<arg>${test_zap.name_title}</arg>
+<arg>${test_zap.name}</arg>
+<arg>${test_zap.surname}</arg>
+<arg>${test_zap.height}</arg>
+<arg>${test_zap.weight}</arg>
+<arg>${test_zap.id}</arg>
+<arg>${test_zap.phone}</arg>
+<arg>${test_zap.email}</arg>
+<arg>${test_zap.job}</arg>
+<arg>${test_zap.job_desc}</arg>
+<arg>${test_zap.address}</arg>
+<arg>${test_zap.district}</arg>
+<arg>${test_zap.sub_district}</arg>
+<kw name="Select name title" library="fill_information_page">
+<arg>${name_title}</arg>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${fill_information_page.name_title}</arg>
+<arg>${title}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240228 10:49:54.342" level="INFO">Selecting options from selection list 'xpath=//option[contains(text(),'เลือกคำนำหน้า')]/..' by label นาย.</msg>
+<status status="PASS" starttime="20240228 10:49:54.338" endtime="20240228 10:49:55.151"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:54.336" endtime="20240228 10:49:55.152"/>
+</kw>
+<kw name="Scroll first" library="fill_information_page">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,800)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240228 10:49:55.156" level="INFO">Executing JavaScript:
+window.scrollTo(0,800)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240228 10:49:55.154" endtime="20240228 10:49:55.192"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:55.153" endtime="20240228 10:49:55.193"/>
+</kw>
+<kw name="Input name" library="fill_information_page">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:55.197" level="INFO">Typing text 'test test' into text field 'xpath=//input[@placeholder="ชื่อของคุณ"]'.</msg>
+<status status="PASS" starttime="20240228 10:49:55.195" endtime="20240228 10:49:55.826"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:55.193" endtime="20240228 10:49:55.826"/>
+</kw>
+<kw name="Input surname" library="fill_information_page">
+<arg>${surname}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.surname}</arg>
+<arg>${surname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:55.831" level="INFO">Typing text 'ชายทะเล' into text field 'xpath=//input[@placeholder="นามสกุลของคุณ"]'.</msg>
+<status status="PASS" starttime="20240228 10:49:55.828" endtime="20240228 10:49:56.312"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:55.827" endtime="20240228 10:49:56.313"/>
+</kw>
+<kw name="Input height" library="fill_information_page">
+<arg>${height}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.height}</arg>
+<arg>${height}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:56.319" level="INFO">Typing text '160' into text field 'xpath=//input[@id="user-height"]'.</msg>
+<status status="PASS" starttime="20240228 10:49:56.318" endtime="20240228 10:49:57.254"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:56.314" endtime="20240228 10:49:57.256"/>
+</kw>
+<kw name="Input weight" library="fill_information_page">
+<arg>${weight}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.weight}</arg>
+<arg>${weight}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:57.286" level="INFO">Typing text '70' into text field 'xpath=//input[@id="user-weight"]'.</msg>
+<status status="PASS" starttime="20240228 10:49:57.283" endtime="20240228 10:49:57.972"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:57.256" endtime="20240228 10:49:57.973"/>
+</kw>
+<kw name="Input id card" library="fill_information_page">
+<arg>${id}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.id_card}</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:57.984" level="INFO">Typing text '6155702406433' into text field 'xpath=//input[@name="idCard"]'.</msg>
+<status status="PASS" starttime="20240228 10:49:57.976" endtime="20240228 10:49:58.910"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:57.973" endtime="20240228 10:49:58.911"/>
+</kw>
+<kw name="Click single" library="fill_information_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${fill_information_page.single}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240228 10:49:58.912" endtime="20240228 10:49:59.069"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${fill_information_page.single}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:59.073" level="INFO">Clicking element 'xpath=//label[contains(text(),'โสด')]'.</msg>
+<status status="PASS" starttime="20240228 10:49:59.070" endtime="20240228 10:49:59.365"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:58.911" endtime="20240228 10:49:59.366"/>
+</kw>
+<kw name="Scroll second" library="fill_information_page">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240228 10:49:59.370" level="INFO">Executing JavaScript:
+window.scrollTo(0,1500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240228 10:49:59.368" endtime="20240228 10:49:59.400"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:59.366" endtime="20240228 10:49:59.401"/>
+</kw>
+<kw name="Input phone number" library="fill_information_page">
+<arg>${phone}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.phone_number}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:49:59.405" level="INFO">Typing text '0877989168' into text field 'xpath=//input[@placeholder="เบอร์โทรศัพท์ของคุณ"]'.</msg>
+<status status="PASS" starttime="20240228 10:49:59.403" endtime="20240228 10:50:00.015"/>
+</kw>
+<status status="PASS" starttime="20240228 10:49:59.402" endtime="20240228 10:50:00.016"/>
+</kw>
+<kw name="Input email" library="fill_information_page">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fill_information_page.email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240228 10:50:00.021" level="INFO">Typing text 'patomtong.rue@gmail.com' into text field 'xpath=//input[@id="mail-leads"]'.</msg>
+<status status="PASS" starttime="20240228 10:50:00.018" endtime="20240228 10:50:00.831"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:00.016" endtime="20240228 10:50:00.831"/>
+</kw>
+<kw name="Chief mechanic job should not be exist" library="fill_information_page">
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${fill_information_page.chief_mechanic_job}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20240228 10:50:00.906" level="INFO">Element 'xpath=//option[contains(text(),"หัวหน้าช่าง")]' did not exist.</msg>
+<status status="PASS" starttime="20240228 10:50:00.833" endtime="20240228 10:50:00.907"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:00.832" endtime="20240228 10:50:00.908"/>
+</kw>
+<kw name="Select job" library="fill_information_page">
+<arg>พนักงาน</arg>
+<doc>inspect element in website to get code</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${fill_information_page.job}</arg>
+<arg>${job}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240228 10:50:00.916" level="INFO">Selecting options from selection list 'xpath=//h4[text()="อาชีพของผู้เอาประกัน"]/..//select[@id="occupation"]' by label พนักงาน.</msg>
+<status status="PASS" starttime="20240228 10:50:00.913" endtime="20240228 10:50:01.319"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:00.912" endtime="20240228 10:50:01.320"/>
+</kw>
+<kw name="Job description should be exist" library="fill_information_page">
+<arg>ประจำสำนักงาน</arg>
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${fill_information_page.job_description_choice}</arg>
+<arg>@text@</arg>
+<arg>${desc}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240228 10:50:01.324" level="INFO">${element} = xpath=//h4[text()="อาชีพของผู้เอาประกัน"]/..//select[@id="job-desc"]//option[contains(text(),"ประจำสำนักงาน")]</msg>
+<status status="PASS" starttime="20240228 10:50:01.322" endtime="20240228 10:50:01.324"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240228 10:50:01.324" endtime="20240228 10:50:01.421"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:01.320" endtime="20240228 10:50:01.421"/>
+</kw>
+<kw name="Job description should be exist" library="fill_information_page">
+<arg>ออกพื้นที่ประจำ</arg>
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${fill_information_page.job_description_choice}</arg>
+<arg>@text@</arg>
+<arg>${desc}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240228 10:50:01.426" level="INFO">${element} = xpath=//h4[text()="อาชีพของผู้เอาประกัน"]/..//select[@id="job-desc"]//option[contains(text(),"ออกพื้นที่ประจำ")]</msg>
+<status status="PASS" starttime="20240228 10:50:01.424" endtime="20240228 10:50:01.426"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240228 10:50:01.427" endtime="20240228 10:50:01.572"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:01.422" endtime="20240228 10:50:01.573"/>
+</kw>
+<kw name="Job description should be exist" library="fill_information_page">
+<arg>ทำงานนอกสำนักงานเป็นครั้งคราว</arg>
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${fill_information_page.job_description_choice}</arg>
+<arg>@text@</arg>
+<arg>${desc}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240228 10:50:01.576" level="INFO">${element} = xpath=//h4[text()="อาชีพของผู้เอาประกัน"]/..//select[@id="job-desc"]//option[contains(text(),"ทำงานนอกสำนักงานเป็นครั้งคราว")]</msg>
+<status status="PASS" starttime="20240228 10:50:01.575" endtime="20240228 10:50:01.576"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240228 10:50:01.577" endtime="20240228 10:50:01.653"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:01.573" endtime="20240228 10:50:01.653"/>
+</kw>
+<kw name="Select job" library="fill_information_page">
+<arg>${job}</arg>
+<doc>inspect element in website to get code</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${fill_information_page.job}</arg>
+<arg>${job}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240228 10:50:01.657" level="INFO">Selecting options from selection list 'xpath=//h4[text()="อาชีพของผู้เอาประกัน"]/..//select[@id="occupation"]' by label พนักงาน.</msg>
+<status status="PASS" starttime="20240228 10:50:01.656" endtime="20240228 10:50:01.766"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:01.654" endtime="20240228 10:50:01.766"/>
+</kw>
+<kw name="Select job description" library="fill_information_page">
+<arg>${job_description}</arg>
+<doc>inspect element in website to get code</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${fill_information_page.job_description}</arg>
+<arg>${description}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240228 10:50:01.771" level="INFO">Selecting options from selection list 'xpath=//h4[text()="อาชีพของผู้เอาประกัน"]/..//select[@id="job-desc"]' by label ประจำสำนักงาน.</msg>
+<status status="PASS" starttime="20240228 10:50:01.769" endtime="20240228 10:50:02.104"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:01.767" endtime="20240228 10:50:02.104"/>
+</kw>
+<kw name="Scroll third" library="fill_information_page">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240228 10:50:02.112" level="INFO">Executing JavaScript:
+window.scrollTo(0,2200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240228 10:50:02.108" endtime="20240228 10:50:02.136"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:02.104" endtime="20240228 10:50:02.136"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240228 10:50:05.140" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240228 10:50:02.139" endtime="20240228 10:50:05.141"/>
+</kw>
+<status status="PASS" starttime="20240228 10:50:02.137" endtime="20240228 10:50:05.141"/>
+</kw>
+<kw name="Click no zap question 1" library="fill_information_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${fill_information_page.no_zap_question_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240228 10:50:10.993" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240228 10:50:10.994" level="FAIL">Element 'xpath=//p[contains(text(),'ได้ขอเอาประกันภัยอุบัติเหตุส่วนบุคคล')]/..//label[contains(text(),'ไม่มี')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20240228 10:50:05.143" endtime="20240228 10:50:11.002"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${fill_information_page.no_zap_question_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240228 10:50:11.002" endtime="20240228 10:50:11.002"/>
+</kw>
+<status status="FAIL" starttime="20240228 10:50:05.142" endtime="20240228 10:50:11.003"/>
+</kw>
+<kw name="Click no zap question 2" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.003" endtime="20240228 10:50:11.003"/>
+</kw>
+<kw name="Scroll down" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.004" endtime="20240228 10:50:11.004"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.007" endtime="20240228 10:50:11.007"/>
+</kw>
+<kw name="Click no zap question 3" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.009" endtime="20240228 10:50:11.009"/>
+</kw>
+<kw name="Click go to next step" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.012" endtime="20240228 10:50:11.013"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.014" endtime="20240228 10:50:11.014"/>
+</kw>
+<kw name="Input home address" library="fill_information_page">
+<arg>${home_address}</arg>
+<status status="NOT RUN" starttime="20240228 10:50:11.014" endtime="20240228 10:50:11.015"/>
+</kw>
+<kw name="Select district" library="fill_information_page">
+<arg>${district}</arg>
+<status status="NOT RUN" starttime="20240228 10:50:11.015" endtime="20240228 10:50:11.016"/>
+</kw>
+<kw name="Choose address" library="fill_information_page">
+<arg>${sub_district}</arg>
+<status status="NOT RUN" starttime="20240228 10:50:11.017" endtime="20240228 10:50:11.017"/>
+</kw>
+<kw name="Scroll down" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.017" endtime="20240228 10:50:11.017"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.017" endtime="20240228 10:50:11.019"/>
+</kw>
+<kw name="Click sibling in law" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.019" endtime="20240228 10:50:11.019"/>
+</kw>
+<kw name="Click no take document" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.019" endtime="20240228 10:50:11.019"/>
+</kw>
+<kw name="Click no tax refund" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.019" endtime="20240228 10:50:11.020"/>
+</kw>
+<kw name="Scroll sixth" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.020" endtime="20240228 10:50:11.020"/>
+</kw>
+<kw name="Click proceed to next step" library="fill_information_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.020" endtime="20240228 10:50:11.021"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.021" endtime="20240228 10:50:11.021"/>
+</kw>
+<kw name="Wait for page load" library="common">
+<status status="NOT RUN" starttime="20240228 10:50:11.021" endtime="20240228 10:50:11.021"/>
+</kw>
+<status status="FAIL" starttime="20240228 10:49:54.255" endtime="20240228 10:50:11.022"/>
+</kw>
+<kw name="Verify date zap" library="check_information_feature">
+<status status="NOT RUN" starttime="20240228 10:50:11.024" endtime="20240228 10:50:11.025"/>
+</kw>
+<kw name="Go to OTP step" library="check_information_feature">
+<status status="NOT RUN" starttime="20240228 10:50:11.028" endtime="20240228 10:50:11.028"/>
+</kw>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="NOT RUN" starttime="20240228 10:50:11.029" endtime="20240228 10:50:11.030"/>
+</kw>
+<kw name="Pay money" library="payment_feature">
+<arg>${test_zap.cc}</arg>
+<arg>${test_zap.name}</arg>
+<arg>${test_zap.date}</arg>
+<arg>${test_zap.code}</arg>
+<status status="NOT RUN" starttime="20240228 10:50:11.031" endtime="20240228 10:50:11.031"/>
+</kw>
+<kw name="Wait for message" library="payment_success_page">
+<status status="NOT RUN" starttime="20240228 10:50:11.033" endtime="20240228 10:50:11.034"/>
+</kw>
+<kw name="Get track number" library="payment_success_page">
+<var>${track_number}</var>
+<status status="NOT RUN" starttime="20240228 10:50:11.035" endtime="20240228 10:50:11.035"/>
+</kw>
+<kw name="Test dataset zap" library="request">
+<arg>${track_number}</arg>
+<status status="NOT RUN" starttime="20240228 10:50:11.037" endtime="20240228 10:50:11.037"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240228 10:50:11.087" endtime="20240228 10:50:15.087"/>
+</kw>
+<status status="FAIL" starttime="20230623 10:49:22.118" endtime="20240228 10:50:15.092">Element 'xpath=//p[contains(text(),'ได้ขอเอาประกันภัยอุบัติเหตุส่วนบุคคล')]/..//label[contains(text(),'ไม่มี')]' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230623 10:49:18.863" endtime="20240228 10:50:15.107"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Zap">Test Zap</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
