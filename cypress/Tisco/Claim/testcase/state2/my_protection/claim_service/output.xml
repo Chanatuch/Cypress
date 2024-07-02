@@ -1,0 +1,1721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-05-03T16:22:02.136318" rpa="false" schemaversion="5">
+<suite id="s1" name="Cs-Retrieve Claim Information" source="C:\Users\ZAtiwit\Documents\Automate\Claim\testcase\state2\my_protection\claim_service\cs-retrieve_claim_information.robot">
+<test id="s1-t1" name="RetrieveClaimInformation_flow - Search Claim information" line="43">
+<kw name="Access to My Protection" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:03.379208" level="INFO">Opening browser 'Chrome' to base url 'https://beta-tisco.okta.com/'.</msg>
+<arg>${value.okta_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-03T16:22:03.378206" elapsed="4.137305"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-03T16:22:07.515511" elapsed="0.113100"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:17.629774" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:07.628611" elapsed="10.001163"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath.email_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:22:17.630715" elapsed="0.043521"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:17.675226" level="INFO">Typing text 'zatiwit@tisco.co.th' into text field 'xpath=//input[@name="identifier"]'.</msg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:17.674236" elapsed="0.078319"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath.password_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:22:17.753551" elapsed="0.017003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:17.770554" level="INFO">Typing text 'Dream171298*' into text field 'xpath=//input[@name="credentials.passcode"]'.</msg>
+<arg>${xpath.password_inputField}</arg>
+<arg>${value.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:17.770554" elapsed="0.062978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:17.833532" level="INFO">Clicking element 'xpath=//input[@value="Sign in"]'.</msg>
+<arg>${xpath.signIn_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:17.833532" elapsed="0.049938"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:27.885263" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:17.884470" elapsed="10.000793"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.search_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:22:27.886168" elapsed="0.044719"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:27.931889" level="INFO">Typing text '(RDBMS) Protection Platform - State2 (OpenID)' into text field 'xpath=//input[@name="dashboard-search-input"]'.</msg>
+<arg>${common.search_textField}</arg>
+<arg>${value.MyProtection}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:27.931889" elapsed="0.194348"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.MyProtection}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:22:28.127238" elapsed="0.016999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:28.144237" level="INFO">Clicking element 'xpath=//span[contains(text(),'(RDBMS) Protection Platform - State2 (OpenID)')]'.</msg>
+<arg>${common.MyProtection}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:28.144237" elapsed="0.066006"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:30.212404" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:28.211241" elapsed="2.001163"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:22:28.210243" elapsed="2.002161"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${value.MyProtection_title}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:30.212404" elapsed="0.524912"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:45.738064" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:30.737316" elapsed="15.000748"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-05-03T16:22:45.746030" level="INFO">${value_common.email} = zatiwit@tisco.co.th</msg>
+<arg>${value_common.email}</arg>
+<arg>${value.email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-05-03T16:22:45.739035" elapsed="0.006995"/>
+</kw>
+<arg>${value.email}</arg>
+<arg>${value.password}</arg>
+<arg>${value.okta_url}</arg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${xpath.password_inputField}</arg>
+<arg>${xpath.signIn_button}</arg>
+<arg>${value.MyProtection}</arg>
+<status status="PASS" start="2024-05-03T16:22:03.376206" elapsed="42.369824"/>
+</kw>
+<kw name="Click 'Retrieve Claim Information' tab" owner="common">
+<kw name="Wait for process 7s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:52.750345" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:45.748993" elapsed="7.001352"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:22:45.748993" elapsed="7.001352"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.claim_service_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:22:52.750345" elapsed="0.031007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:52.781352" level="INFO">Clicking element 'xpath=//div[@tc-menu-id="P369"]/..//span[contains(text(),'Claim Service')]'.</msg>
+<arg>${common.claim_service_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:52.781352" elapsed="0.051026"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:54.833257" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:52.832378" elapsed="2.000879"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:22:52.832378" elapsed="2.000879"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.retrieve_claim_information_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:22:54.834259" elapsed="0.040383"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:22:54.875642" level="INFO">Clicking element 'xpath=//div[@tc-child-menu-id="P369"]/div[@tc-child-id="3010953f-a916-4c25-ad38-7a082b0ed859"]/..//span[contains(text(),'เรียกดูข้อมูล Claim Information')]'.</msg>
+<arg>${common.retrieve_claim_information_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:22:54.875642" elapsed="0.047034"/>
+</kw>
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:22:59.923714" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:54.922676" elapsed="5.001038"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:22:54.922676" elapsed="5.001038"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:22:45.747938" elapsed="14.175776"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:04.925134" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:22:59.924640" elapsed="5.000494"/>
+</kw>
+<kw name="Input All field in 'Retrieve Claim Information'" owner="retrieve_claim_information_feature">
+<kw name="Input 'Accident no' field" owner="retrieve_claim_information_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.accident_no_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:04.933283" elapsed="0.032064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:04.966347" level="INFO">Typing text 'AD_FD20240313_1011' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel[1]/div/div[2]/div[2]/div/form/div[1]/div[1]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.accident_no_field}</arg>
+<arg>${value_claim_info.accident_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:04.965347" elapsed="0.287660"/>
+</kw>
+<arg>${value_claim_info.accident_no}</arg>
+<status status="PASS" start="2024-05-03T16:23:04.931160" elapsed="0.321847"/>
+</kw>
+<kw name="Input 'Accident No Date' field" owner="retrieve_claim_information_page">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-03T16:23:05.254014" level="INFO">${accident_no_date_ranges} = [['4', 'ตุลาคม', '2566'], ['5', 'ตุลาคม', '2566']]</msg>
+<var>${accident_no_date_ranges}</var>
+<arg>${value_claim_info.accident_no_date_first}</arg>
+<arg>${value_claim_info.accident_no_date_last}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-03T16:23:05.254014" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.accident_no_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:05.254014" elapsed="0.023031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:05.277045" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[1]/div[2]/mbs-common-field/mbs-widget-date-between/div/div/span/input[1]'.</msg>
+<arg>${retrieve_claim_info_page.accident_no_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:05.277045" elapsed="0.090965"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:07.369783" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:05.369042" elapsed="2.000741"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:05.368010" elapsed="2.001773"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.year_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:07.370777" elapsed="0.030122"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:07.401898" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[1]/div/button/span/span'.</msg>
+<arg>${retrieve_claim_info_page.year_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:07.401898" elapsed="0.063994"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td/span[contains(text(),'${accident_no_date}[2]')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:07.465892" elapsed="0.023996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:07.490908" level="INFO">Clicking element 'xpath=//td/span[contains(text(),'2566')]'.</msg>
+<arg>xpath=//td/span[contains(text(),'${accident_no_date}[2]')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:07.489888" elapsed="0.053002"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:08.544199" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:07.542890" elapsed="1.001309"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:07.542890" elapsed="1.001309"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:08.544199" elapsed="0.033006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:08.578199" level="INFO">Clicking element 'xpath=//td[@aria-label="ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:08.577205" elapsed="0.071995"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:09.651385" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:08.650236" elapsed="1.001149"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:08.650236" elapsed="1.001149"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${accident_no_date}[0] ${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:09.652326" elapsed="0.028499"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:09.681826" level="INFO">Clicking element 'xpath=//td[@aria-label="4 ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${accident_no_date}[0] ${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:09.680825" elapsed="0.039804"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:10.721901" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:09.721630" elapsed="1.000271"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:09.721630" elapsed="1.000271"/>
+</kw>
+<var name="${accident_no_date}">['4', 'ตุลาคม', '2566']</var>
+<status status="PASS" start="2024-05-03T16:23:07.370777" elapsed="3.351124"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.year_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:10.721901" elapsed="0.020393"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:10.743329" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[1]/div/button/span/span'.</msg>
+<arg>${retrieve_claim_info_page.year_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:10.743329" elapsed="0.071419"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td/span[contains(text(),'${accident_no_date}[2]')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:10.815740" elapsed="0.030870"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:10.846610" level="INFO">Clicking element 'xpath=//td/span[contains(text(),'2566')]'.</msg>
+<arg>xpath=//td/span[contains(text(),'${accident_no_date}[2]')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:10.846610" elapsed="0.051000"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:11.898898" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:10.898642" elapsed="1.000256"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:10.898642" elapsed="1.000256"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:11.899917" elapsed="0.035120"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:11.935037" level="INFO">Clicking element 'xpath=//td[@aria-label="ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:11.935037" elapsed="0.052536"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:12.989016" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:11.988576" elapsed="1.000440"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:11.987573" elapsed="1.001443"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${accident_no_date}[0] ${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:12.989016" elapsed="0.024992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:13.015009" level="INFO">Clicking element 'xpath=//td[@aria-label="5 ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${accident_no_date}[0] ${accident_no_date}[1] ${accident_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:13.015009" elapsed="0.053445"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:14.069635" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:13.069454" elapsed="1.000181"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:13.068454" elapsed="1.001181"/>
+</kw>
+<var name="${accident_no_date}">['5', 'ตุลาคม', '2566']</var>
+<status status="PASS" start="2024-05-03T16:23:10.721901" elapsed="3.347734"/>
+</iter>
+<var>${accident_no_date}</var>
+<value>@{accident_no_date_ranges}</value>
+<status status="PASS" start="2024-05-03T16:23:07.369783" elapsed="6.699852"/>
+</for>
+<arg>${value_claim_info.accident_no_date_first}</arg>
+<arg>${value_claim_info.accident_no_date_last}</arg>
+<status status="PASS" start="2024-05-03T16:23:05.253007" elapsed="8.816628"/>
+</kw>
+<kw name="Input 'Claim no' field" owner="retrieve_claim_information_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.claim_no_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:14.070651" elapsed="0.020667"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:14.092361" level="INFO">Typing text 'CL_06_0021' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel[1]/div/div[2]/div[2]/div/form/div[2]/div[1]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.claim_no_field}</arg>
+<arg>${value_claim_info.claim_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:14.092361" elapsed="0.202787"/>
+</kw>
+<arg>${value_claim_info.claim_no}</arg>
+<status status="PASS" start="2024-05-03T16:23:14.069635" elapsed="0.225513"/>
+</kw>
+<kw name="Input 'Claim No Date' field" owner="retrieve_claim_information_page">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-03T16:23:14.296146" level="INFO">${claim_no_date_ranges} = [['4', 'ตุลาคม', '2566'], ['5', 'ตุลาคม', '2566']]</msg>
+<var>${claim_no_date_ranges}</var>
+<arg>${value_claim_info.claim_no_date_first}</arg>
+<arg>${value_claim_info.claim_no_date_last}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-03T16:23:14.295148" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.claim_no_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:14.296146" elapsed="0.027002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:14.324147" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[2]/div[2]/mbs-common-field/mbs-widget-date-between/div/div/span/input[1]'.</msg>
+<arg>${retrieve_claim_info_page.claim_no_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:14.323148" elapsed="0.063061"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:16.387250" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:14.386209" elapsed="2.001041"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:14.386209" elapsed="2.001041"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.claim_no_year_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:16.388264" elapsed="0.019289"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:16.408564" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[1]/div/button/span/span'.</msg>
+<arg>${retrieve_claim_info_page.claim_no_year_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:16.407553" elapsed="0.050091"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td/span[contains(text(),'${claim_no_date}[2]')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:16.457644" elapsed="0.023382"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:16.482053" level="INFO">Clicking element 'xpath=//td/span[contains(text(),'2566')]'.</msg>
+<arg>xpath=//td/span[contains(text(),'${claim_no_date}[2]')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:16.482053" elapsed="0.042974"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:17.526927" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:16.526053" elapsed="1.000874"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:16.525027" elapsed="1.001900"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:17.526927" elapsed="0.017706"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:17.544633" level="INFO">Clicking element 'xpath=//td[@aria-label="ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:17.544633" elapsed="0.050731"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:18.597113" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:17.596400" elapsed="1.000713"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:17.595364" elapsed="1.001749"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${claim_no_date}[0] ${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:18.598112" elapsed="0.018996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:18.617108" level="INFO">Clicking element 'xpath=//td[@aria-label="4 ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${claim_no_date}[0] ${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:18.617108" elapsed="0.038001"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:19.656175" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:18.656111" elapsed="1.000064"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:18.656111" elapsed="1.000064"/>
+</kw>
+<var name="${claim_no_date}">['4', 'ตุลาคม', '2566']</var>
+<status status="PASS" start="2024-05-03T16:23:16.387250" elapsed="3.268925"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.claim_no_year_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:19.656175" elapsed="0.016959"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:19.673134" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[1]/div/button/span/span'.</msg>
+<arg>${retrieve_claim_info_page.claim_no_year_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:19.673134" elapsed="0.046364"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td/span[contains(text(),'${claim_no_date}[2]')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:19.719498" elapsed="0.021791"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:19.742396" level="INFO">Clicking element 'xpath=//td/span[contains(text(),'2566')]'.</msg>
+<arg>xpath=//td/span[contains(text(),'${claim_no_date}[2]')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:19.741289" elapsed="0.042825"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:20.784603" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:19.784114" elapsed="1.000489"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:19.784114" elapsed="1.000489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:20.784603" elapsed="0.019994"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:20.805599" level="INFO">Clicking element 'xpath=//td[@aria-label="ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:20.804597" elapsed="0.069382"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:21.875564" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:20.873979" elapsed="1.001585"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:20.873979" elapsed="1.001585"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${claim_no_date}[0] ${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:21.875564" elapsed="0.019871"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:21.896434" level="INFO">Clicking element 'xpath=//td[@aria-label="5 ตุลาคม 2566"]'.</msg>
+<arg>xpath=//td[@aria-label="${claim_no_date}[0] ${claim_no_date}[1] ${claim_no_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:21.895435" elapsed="0.061007"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:22.957571" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:21.957434" elapsed="1.000137"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:21.956442" elapsed="1.001826"/>
+</kw>
+<var name="${claim_no_date}">['5', 'ตุลาคม', '2566']</var>
+<status status="PASS" start="2024-05-03T16:23:19.656175" elapsed="3.302093"/>
+</iter>
+<var>${claim_no_date}</var>
+<value>@{claim_no_date_ranges}</value>
+<status status="PASS" start="2024-05-03T16:23:16.387250" elapsed="6.571018"/>
+</for>
+<arg>${value_claim_info.claim_no_date_first}</arg>
+<arg>${value_claim_info.claim_no_date_last}</arg>
+<status status="PASS" start="2024-05-03T16:23:14.295148" elapsed="8.664143"/>
+</kw>
+<kw name="Input 'Brand' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:24.961402" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:22.961296" elapsed="2.000106"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:22.960350" elapsed="2.001052"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:24.961402" level="INFO">Clicking element 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._1337"]'.</msg>
+<arg>${retrieve_claim_info_page.brand_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:24.961402" elapsed="0.077580"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:27.039252" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:25.038982" elapsed="2.000270"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:25.038982" elapsed="2.001213"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:27.041182" level="INFO">Typing text 'FORD' into text field 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._1337"]'.</msg>
+<arg>${retrieve_claim_info_page.brand_field}</arg>
+<arg>${value_claim_info.brand}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:27.040195" elapsed="0.144882"/>
+</kw>
+<kw name="Wait for process 4s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:31.186742" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:27.186079" elapsed="4.000663"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:27.186079" elapsed="4.000663"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:31.186742" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[3]/div[1]/mbs-common-field/mbs-widget-dropdown/div/div/div/div[2]/div/span[contains(text(),'FORD')]'.</msg>
+<arg>${retrieve_claim_info_page.brand_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:31.186742" elapsed="0.055969"/>
+</kw>
+<arg>${value_claim_info.brand}</arg>
+<status status="PASS" start="2024-05-03T16:23:22.959291" elapsed="8.283420"/>
+</kw>
+<kw name="Input 'Model' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:33.244989" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:31.243712" elapsed="2.001277"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:31.243712" elapsed="2.002245"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:33.246977" level="INFO">Clicking element 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._1338"]'.</msg>
+<arg>${retrieve_claim_info_page.model_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:33.245957" elapsed="0.079663"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:35.326940" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:33.326620" elapsed="2.000320"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:33.325620" elapsed="2.001320"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:35.326940" level="INFO">Typing text 'RANGER DOUBLE CAB 1.6 - 2.0 CC' into text field 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._1338"]'.</msg>
+<arg>${retrieve_claim_info_page.model_field}</arg>
+<arg>${value_claim_info.model}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:35.326940" elapsed="0.339268"/>
+</kw>
+<kw name="Wait for process 4s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:39.667307" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:35.667208" elapsed="4.000099"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:35.667208" elapsed="4.000099"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:39.667307" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[3]/div[2]/mbs-common-field/mbs-widget-dropdown/div/div/div/div[2]/div/span[contains(text(),'RANGER DOUBLE CAB 1.6 - 2.0 CC')]'.</msg>
+<arg>${retrieve_claim_info_page.model_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:39.667307" elapsed="0.051309"/>
+</kw>
+<arg>${value_claim_info.model}</arg>
+<status status="PASS" start="2024-05-03T16:23:31.243712" elapsed="8.474904"/>
+</kw>
+<kw name="Input 'Customer ID' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:40.720693" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:39.720616" elapsed="1.000077"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:39.719616" elapsed="1.001077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.customer_id_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:40.720693" elapsed="0.022565"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:40.743258" level="INFO">Typing text '5717660027179' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[4]/div[1]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.customer_id_field}</arg>
+<arg>${value_claim_info.customer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:40.743258" elapsed="0.216479"/>
+</kw>
+<arg>${value_claim_info.customer_id}</arg>
+<status status="PASS" start="2024-05-03T16:23:39.719616" elapsed="1.240121"/>
+</kw>
+<kw name="Input 'Customer Full Name' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:41.962418" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:40.960733" elapsed="1.001685"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:40.960733" elapsed="1.001685"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.customer_full_name_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:41.962418" elapsed="0.028983"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:41.991401" level="INFO">Typing text 'driver test15' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[4]/div[2]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.customer_full_name_field}</arg>
+<arg>${value_claim_info.customer_full_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:41.991401" elapsed="0.201043"/>
+</kw>
+<arg>${value_claim_info.customer_full_name}</arg>
+<status status="PASS" start="2024-05-03T16:23:40.960733" elapsed="1.231711"/>
+</kw>
+<kw name="Input 'Accident Province' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:44.193805" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:42.193403" elapsed="2.000402"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:42.192444" elapsed="2.002326"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:44.195882" level="INFO">Clicking element 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._1662"]'.</msg>
+<arg>${retrieve_claim_info_page.accident_province_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:44.194770" elapsed="0.097338"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:46.294444" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:44.293115" elapsed="2.001329"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:44.293115" elapsed="2.001329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:46.295397" level="INFO">Typing text 'Nakhon Sawan' into text field 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._1662"]'.</msg>
+<arg>${retrieve_claim_info_page.accident_province_field}</arg>
+<arg>${value_claim_info.accident_province}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:46.295397" elapsed="0.179250"/>
+</kw>
+<kw name="Wait for process 4s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:50.475885" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:46.474647" elapsed="4.001238"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:46.474647" elapsed="4.001238"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:50.476870" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[5]/div[1]/mbs-common-field/mbs-widget-dropdown/div/div/div/div[2]/div/span[contains(text(),'Nakhon Sawan')]'.</msg>
+<arg>${retrieve_claim_info_page.accident_province_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:50.476870" elapsed="0.069261"/>
+</kw>
+<arg>${value_claim_info.accident_province}</arg>
+<status status="PASS" start="2024-05-03T16:23:42.192444" elapsed="8.353687"/>
+</kw>
+<kw name="Input 'Accident Zipcode' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:51.547969" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:50.547131" elapsed="1.000838"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:50.547131" elapsed="1.000838"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.accident_zipcode_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:51.547969" elapsed="0.032364"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:51.580333" level="INFO">Typing text '60130' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[5]/div[2]/mbs-common-field/mbs-widget-number/div/div/div/input'.</msg>
+<arg>${retrieve_claim_info_page.accident_zipcode_field}</arg>
+<arg>${value_claim_info.accident_zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:51.580333" elapsed="0.119648"/>
+</kw>
+<arg>${value_claim_info.accident_zipcode}</arg>
+<status status="PASS" start="2024-05-03T16:23:50.546131" elapsed="1.153850"/>
+</kw>
+<kw name="Input 'License no' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:52.702666" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:51.701991" elapsed="1.000675"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:51.700981" elapsed="1.001685"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.license_no_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:52.702666" elapsed="0.026874"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:52.729540" level="INFO">Typing text 'ทบ 011' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[6]/div[1]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.license_no_field}</arg>
+<arg>${value_claim_info.license_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:52.729540" elapsed="0.132000"/>
+</kw>
+<arg>${value_claim_info.license_no}</arg>
+<status status="PASS" start="2024-05-03T16:23:51.700981" elapsed="1.160559"/>
+</kw>
+<kw name="Input 'Customer Zipcode' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:53.864236" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:52.863513" elapsed="1.000723"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:52.862507" elapsed="1.001729"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.customer_zipcode_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:23:53.864236" elapsed="0.048407"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:53.913646" level="INFO">Typing text '11130' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[6]/div[2]/mbs-common-field/mbs-widget-number/div/div/div/input'.</msg>
+<arg>${retrieve_claim_info_page.customer_zipcode_field}</arg>
+<arg>${value_claim_info.customer_zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:53.913646" elapsed="0.143655"/>
+</kw>
+<arg>${value_claim_info.customer_zipcode}</arg>
+<status status="PASS" start="2024-05-03T16:23:52.861540" elapsed="1.195761"/>
+</kw>
+<kw name="Input 'Customer Province' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:56.059310" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:54.058357" elapsed="2.000953"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:54.057301" elapsed="2.002009"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:56.059310" level="INFO">Clicking element 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._16668"]'.</msg>
+<arg>${retrieve_claim_info_page.customer_province_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:56.059310" elapsed="0.061777"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:23:58.122521" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:56.122109" elapsed="2.000412"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:56.121087" elapsed="2.001434"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:23:58.122521" level="INFO">Typing text 'Rayong' into text field 'xpath=//input[@id="id.O2_D4_97.search.criteria.criteriafield._16668"]'.</msg>
+<arg>${retrieve_claim_info_page.customer_province_field}</arg>
+<arg>${value_claim_info.customer_province}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:23:58.122521" elapsed="0.126053"/>
+</kw>
+<kw name="Wait for process 4s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:02.250323" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:23:58.249573" elapsed="4.000750"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:23:58.249573" elapsed="4.000750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:24:02.250323" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[7]/div/mbs-common-field/mbs-widget-dropdown/div/div/div/div[2]/div/span[contains(text(),'Rayong')]'.</msg>
+<arg>${retrieve_claim_info_page.customer_province_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:24:02.250323" elapsed="0.059090"/>
+</kw>
+<arg>${value_claim_info.customer_province}</arg>
+<status status="PASS" start="2024-05-03T16:23:54.057301" elapsed="8.252112"/>
+</kw>
+<kw name="Input 'App code' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:03.311304" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:24:02.310443" elapsed="1.000861"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:02.310443" elapsed="1.000861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.app_code_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:24:03.311304" elapsed="0.021470"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:24:03.333813" level="INFO">Typing text 'HP' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel[1]/div/div[2]/div[2]/div/form/div[10]/div[1]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.app_code_field}</arg>
+<arg>${value_claim_info.app_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:24:03.332774" elapsed="0.121049"/>
+</kw>
+<arg>${value_claim_info.app_code}</arg>
+<status status="PASS" start="2024-05-03T16:24:02.309413" elapsed="1.144410"/>
+</kw>
+<kw name="Input 'Account' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:04.456155" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:24:03.454822" elapsed="1.001333"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:03.454822" elapsed="1.002447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.account_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:24:04.457269" elapsed="0.039534"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:24:04.497738" level="INFO">Typing text '5238609' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel[1]/div/div[2]/div[2]/div/form/div[10]/div[2]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.account_field}</arg>
+<arg>${value_claim_info.account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:24:04.497738" elapsed="0.208637"/>
+</kw>
+<arg>${value_claim_info.account}</arg>
+<status status="PASS" start="2024-05-03T16:24:03.454822" elapsed="1.251553"/>
+</kw>
+<kw name="Input 'Phone Number At Accident' field" owner="retrieve_claim_information_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:05.707882" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:24:04.707405" elapsed="1.000477"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:04.707405" elapsed="1.000477"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${retrieve_claim_info_page.phone_number_at_accident_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T16:24:05.707882" elapsed="0.026842"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:24:05.735722" level="INFO">Typing text '0846422332' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel[1]/div/div[2]/div[2]/div/form/div[11]/div[1]/mbs-common-field/mbs-widget-textbox/div/div/span/input'.</msg>
+<arg>${retrieve_claim_info_page.phone_number_at_accident_field}</arg>
+<arg>${value_claim_info.phone_number_at_accident}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:24:05.735722" elapsed="0.197000"/>
+</kw>
+<arg>${value_claim_info.phone_number_at_accident}</arg>
+<status status="PASS" start="2024-05-03T16:24:04.706375" elapsed="1.226347"/>
+</kw>
+<arg>${value_claim_info.accident_no}</arg>
+<arg>${value_claim_info.accident_no_date_first}</arg>
+<arg>${value_claim_info.accident_no_date_last}</arg>
+<arg>${value_claim_info.claim_no}</arg>
+<arg>${value_claim_info.claim_no_date_first}</arg>
+<arg>${value_claim_info.claim_no_date_last}</arg>
+<arg>${value_claim_info.brand}</arg>
+<arg>${value_claim_info.model}</arg>
+<arg>${value_claim_info.customer_id}</arg>
+<arg>${value_claim_info.customer_full_name}</arg>
+<arg>${value_claim_info.accident_province}</arg>
+<arg>${value_claim_info.accident_zipcode}</arg>
+<arg>${value_claim_info.license_no}</arg>
+<arg>${value_claim_info.customer_zipcode}</arg>
+<arg>${value_claim_info.customer_province}</arg>
+<arg>${value_claim_info.app_code}</arg>
+<arg>${value_claim_info.account}</arg>
+<arg>${value_claim_info.phone_number_at_accident}</arg>
+<status status="PASS" start="2024-05-03T16:23:04.928177" elapsed="61.004545"/>
+</kw>
+<kw name="Click 'Search' Button" owner="retrieve_claim_information_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:07.935014" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:24:05.934726" elapsed="2.000288"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:05.933722" elapsed="2.001292"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[14]/div/mbs-widget-button/div/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-03T16:24:07.935014" elapsed="0.282942"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:10.219441" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:24:08.218986" elapsed="2.000455"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:08.217956" elapsed="2.001485"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T16:24:10.221457" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-16e2e802-ed24-4bbf-826c-2c5bb0815a2d/mbs-templates-main/mbs-templates-search/mbs-common-search/mbs-widget-panel/div/div[2]/div[2]/div/form/div[14]/div/mbs-widget-button/div/button'.</msg>
+<arg>${retrieve_claim_info_page.search_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T16:24:10.220457" elapsed="0.108820"/>
+</kw>
+<kw name="Wait for process 7s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.330715" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T16:24:10.330291" elapsed="7.000424"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:10.329277" elapsed="7.002520"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:05.933722" elapsed="11.398075"/>
+</kw>
+<kw name="Verify &quot;Claim Information&quot; details" owner="retrieve_claim_information_page">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.337790" level="INFO">${value.count} = 0</msg>
+<var>${value.count}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.334794" elapsed="0.002996"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.339780" level="INFO">@{list_claim_information} = [ AD_FD20240313_1011 | CL_06_0021 | FORD | RANGER DOUBLE CAB 1.6 - 2.0 CC | 5717660027179 | driver test15 | Nakhon Sawan | 60130 | ทบ 011 | 11130 | Rayong | HP | 5238609 | 0846422332 ]</msg>
+<var>@{list_claim_information}</var>
+<arg>${value_claim_info.accident_no}</arg>
+<arg>${value_claim_info.claim_no}</arg>
+<arg>${value_claim_info.brand}</arg>
+<arg>${value_claim_info.model}</arg>
+<arg>${value_claim_info.customer_id}</arg>
+<arg>${value_claim_info.customer_full_name}</arg>
+<arg>${value_claim_info.accident_province}</arg>
+<arg>${value_claim_info.accident_zipcode}</arg>
+<arg>${value_claim_info.license_no}</arg>
+<arg>${value_claim_info.customer_zipcode}</arg>
+<arg>${value_claim_info.customer_province}</arg>
+<arg>${value_claim_info.app_code}</arg>
+<arg>${value_claim_info.account}</arg>
+<arg>${value_claim_info.phone_number_at_accident}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.338800" elapsed="0.000980"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.339780" elapsed="0.047392"/>
+</kw>
+<msg time="2024-05-03T16:24:17.387172" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.339780" elapsed="0.047392"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.388187" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = AD_FD20240313_1011</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.387172" elapsed="0.001015"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.387172" elapsed="0.001015"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.388187" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.388187" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.387172" elapsed="0.001015"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.389186" level="INFO">${value.count} = 1</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.388187" elapsed="0.000999"/>
+</kw>
+<var name="${claim_info_value}">AD_FD20240313_1011</var>
+<status status="PASS" start="2024-05-03T16:24:17.339780" elapsed="0.049406"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.390185" elapsed="0.039096"/>
+</kw>
+<msg time="2024-05-03T16:24:17.429281" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.390185" elapsed="0.039096"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.430271" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = CL_06_0021</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.429281" elapsed="0.000990"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.429281" elapsed="0.000990"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.430271" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.430271" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.429281" elapsed="0.000990"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.431263" level="INFO">${value.count} = 2</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.430271" elapsed="0.000992"/>
+</kw>
+<var name="${claim_info_value}">CL_06_0021</var>
+<status status="PASS" start="2024-05-03T16:24:17.390185" elapsed="0.041078"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.432264" elapsed="0.038938"/>
+</kw>
+<msg time="2024-05-03T16:24:17.471202" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.432264" elapsed="0.038938"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.472269" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = FORD</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.472269" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.472269" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.472269" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.472269" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.472269" elapsed="0.000000"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.474272" level="INFO">${value.count} = 3</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.472269" elapsed="0.002003"/>
+</kw>
+<var name="${claim_info_value}">FORD</var>
+<status status="PASS" start="2024-05-03T16:24:17.431263" elapsed="0.043009"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.474272" elapsed="0.038927"/>
+</kw>
+<msg time="2024-05-03T16:24:17.513199" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.474272" elapsed="0.038927"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.514171" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = RANGER DOUBLE CAB 1.6 - 2.0 CC</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.513199" elapsed="0.000972"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.513199" elapsed="0.000972"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.514171" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.514171" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.513199" elapsed="0.000972"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.515172" level="INFO">${value.count} = 4</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.514171" elapsed="0.001001"/>
+</kw>
+<var name="${claim_info_value}">RANGER DOUBLE CAB 1.6 - 2.0 CC</var>
+<status status="PASS" start="2024-05-03T16:24:17.474272" elapsed="0.040900"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.516171" elapsed="0.037052"/>
+</kw>
+<msg time="2024-05-03T16:24:17.554276" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.516171" elapsed="0.038105"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.554276" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = 5717660027179</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.554276" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.554276" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.554276" elapsed="0.000932"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.554276" elapsed="0.000932"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.554276" elapsed="0.000932"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.556270" level="INFO">${value.count} = 5</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.555208" elapsed="0.001062"/>
+</kw>
+<var name="${claim_info_value}">5717660027179</var>
+<status status="PASS" start="2024-05-03T16:24:17.516171" elapsed="0.040099"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.556270" elapsed="0.038902"/>
+</kw>
+<msg time="2024-05-03T16:24:17.596173" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.556270" elapsed="0.039903"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.596173" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = driver test15</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.596173" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.596173" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.597172" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.596173" elapsed="0.000999"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.596173" elapsed="0.000999"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.598171" level="INFO">${value.count} = 6</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.597172" elapsed="0.000999"/>
+</kw>
+<var name="${claim_info_value}">driver test15</var>
+<status status="PASS" start="2024-05-03T16:24:17.556270" elapsed="0.041901"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.599187" elapsed="0.038026"/>
+</kw>
+<msg time="2024-05-03T16:24:17.637213" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.598171" elapsed="0.039042"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.637213" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = Nakhon Sawan</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.637213" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.637213" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.638264" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.638264" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.637213" elapsed="0.001051"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.639264" level="INFO">${value.count} = 7</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.638264" elapsed="0.001000"/>
+</kw>
+<var name="${claim_info_value}">Nakhon Sawan</var>
+<status status="PASS" start="2024-05-03T16:24:17.598171" elapsed="0.041093"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.640275" elapsed="0.038935"/>
+</kw>
+<msg time="2024-05-03T16:24:17.679210" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.640275" elapsed="0.038935"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.680279" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = 60130</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.679210" elapsed="0.001069"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.679210" elapsed="0.001069"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.680279" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.680279" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.679210" elapsed="0.001069"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.681272" level="INFO">${value.count} = 8</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.680279" elapsed="0.001983"/>
+</kw>
+<var name="${claim_info_value}">60130</var>
+<status status="PASS" start="2024-05-03T16:24:17.639264" elapsed="0.042998"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.682262" elapsed="0.039943"/>
+</kw>
+<msg time="2024-05-03T16:24:17.722205" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.682262" elapsed="0.039943"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.723266" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = ทบ 011</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.722205" elapsed="0.001061"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.722205" elapsed="0.001061"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.723266" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.723266" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.722205" elapsed="0.001061"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.724280" level="INFO">${value.count} = 9</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.723266" elapsed="0.001014"/>
+</kw>
+<var name="${claim_info_value}">ทบ 011</var>
+<status status="PASS" start="2024-05-03T16:24:17.682262" elapsed="0.042018"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.725274" elapsed="0.037899"/>
+</kw>
+<msg time="2024-05-03T16:24:17.763173" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.725274" elapsed="0.037899"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.764198" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = 11130</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.764198" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.763173" elapsed="0.001025"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.764198" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.764198" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.763173" elapsed="0.001025"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.766186" level="INFO">${value.count} = 10</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.764198" elapsed="0.001988"/>
+</kw>
+<var name="${claim_info_value}">11130</var>
+<status status="PASS" start="2024-05-03T16:24:17.725274" elapsed="0.040912"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.766186" elapsed="0.038987"/>
+</kw>
+<msg time="2024-05-03T16:24:17.805173" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.766186" elapsed="0.038987"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.806190" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = Rayong</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.805173" elapsed="0.001017"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.805173" elapsed="0.001017"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.806190" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.806190" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.805173" elapsed="0.001017"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.807187" level="INFO">${value.count} = 11</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.806190" elapsed="0.000997"/>
+</kw>
+<var name="${claim_info_value}">Rayong</var>
+<status status="PASS" start="2024-05-03T16:24:17.766186" elapsed="0.041001"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.808187" elapsed="0.039986"/>
+</kw>
+<msg time="2024-05-03T16:24:17.848173" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.808187" elapsed="0.039986"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.849188" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = HP</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.848173" elapsed="0.001015"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.848173" elapsed="0.001015"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.849188" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.849188" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.848173" elapsed="0.001015"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.850192" level="INFO">${value.count} = 12</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.849188" elapsed="0.001004"/>
+</kw>
+<var name="${claim_info_value}">HP</var>
+<status status="PASS" start="2024-05-03T16:24:17.807187" elapsed="0.043005"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.851190" elapsed="0.048983"/>
+</kw>
+<msg time="2024-05-03T16:24:17.901174" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.851190" elapsed="0.049984"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.901174" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = 5238609</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.901174" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.901174" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.902172" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.901174" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.901174" elapsed="0.000998"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.903197" level="INFO">${value.count} = 13</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.902172" elapsed="0.001025"/>
+</kw>
+<var name="${claim_info_value}">5238609</var>
+<status status="PASS" start="2024-05-03T16:24:17.851190" elapsed="0.052007"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${claim_info_value}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.904192" elapsed="0.040022"/>
+</kw>
+<msg time="2024-05-03T16:24:17.944214" level="INFO">${Result_claim_info} = True</msg>
+<var>${Result_claim_info}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${claim_info_value}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.904192" elapsed="0.040022"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_claim_info}' == 'True'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.945205" level="INFO">พบข้อมูลรายละเอียดความคุ้มครอง = 0846422332</msg>
+<arg>พบข้อมูลรายละเอียดความคุ้มครอง = ${list_claim_information}[${value.count}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.945205" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:24:17.945205" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูลตรงกับ = ${list_claim_information}[${value.count}]</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-03T16:24:17.945205" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-03T16:24:17.945205" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-03T16:24:17.944214" elapsed="0.000991"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-03T16:24:17.947265" level="INFO">${value.count} = 14</msg>
+<var>${value.count}</var>
+<arg>${value.count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.945205" elapsed="0.002060"/>
+</kw>
+<var name="${claim_info_value}">0846422332</var>
+<status status="PASS" start="2024-05-03T16:24:17.903197" elapsed="0.044068"/>
+</iter>
+<var>${claim_info_value}</var>
+<value>@{list_claim_information}</value>
+<status status="PASS" start="2024-05-03T16:24:17.339780" elapsed="0.607485"/>
+</for>
+<status status="PASS" start="2024-05-03T16:24:17.333798" elapsed="0.613467"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-05-03T16:24:17.948237" elapsed="6.446477"/>
+</kw>
+<status status="PASS" start="2024-05-03T16:22:03.375207" elapsed="141.020541"/>
+</test>
+<status status="PASS" start="2024-05-03T16:22:02.141239" elapsed="142.256204"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cs-Retrieve Claim Information">Cs-Retrieve Claim Information</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-03T16:22:03.220206" level="WARN">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\common.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-03T16:22:03.270208" level="WARN">Imported resource file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\feature\report_management\import_eir_file_feature.robot' is empty.</msg>
+<msg time="2024-05-03T16:22:03.355211" level="WARN">Imported resource file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\report_management\import_eir_file_main_page.robot' is empty.</msg>
+<msg time="2024-05-03T16:22:03.371216" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\common.robot' on line 4: Setting variable '${common.app_isp_partner}' failed: Resolving variable '${value.partner_search}' failed: Variable '${value}' not found.</msg>
+</errors>
+</robot>

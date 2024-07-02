@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-03-26T10:30:57.548312" rpa="false" schemaversion="5">
+<suite id="s1" name="Assign Nissan Dealer" source="C:\Users\ZAtiwit\Documents\Automate\Claim\testcase\state2\octopus\nissan\assign_nissan_dealer.robot">
+<test id="s1-t1" name="Delete Dealer flow - Nissan" line="37">
+<kw name="Access to Octopus" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:30:58.646936" level="INFO">Opening browser 'Chrome' to base url 'https://octopus2.tbeta.co/line-login/login'.</msg>
+<arg>${value.okta_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-26T10:30:58.646936" elapsed="4.064070"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-26T10:31:02.712007" elapsed="0.110001"/>
+</kw>
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:07.822708" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:02.822008" elapsed="5.000700"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:02.822008" elapsed="5.000700"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath.email_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:07.822708" elapsed="0.031270"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:07.853978" level="INFO">Typing text 'atiwit_nissan@tisco.co.th' into text field 'xpath=//input[@id="username"]'.</msg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:07.853978" elapsed="0.128862"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:07.983841" level="INFO">Clicking element 'xpath=/html/body/div/div/div/section/main/div/div/div[1]/div/div[2]/div[4]/div/button'.</msg>
+<arg>${xpath.signIn_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:07.982840" elapsed="0.030548"/>
+</kw>
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:13.014421" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:08.013388" elapsed="5.001033"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:08.013388" elapsed="5.002098"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-03-26T10:31:13.016490" level="INFO">Length is 6.</msg>
+<msg time="2024-03-26T10:31:13.016490" level="INFO">${pin_length} = 6</msg>
+<var>${pin_length}</var>
+<arg>${value.pin}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.015486" elapsed="0.001004"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:13.018491" level="INFO">Typing text '1' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[1]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.017492" elapsed="0.097394"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-03-26T10:31:13.017492" elapsed="0.097394"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:13.114886" level="INFO">Typing text '7' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[2]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.114886" elapsed="0.038385"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-03-26T10:31:13.114886" elapsed="0.038385"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:13.153271" level="INFO">Typing text '1' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[3]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.153271" elapsed="0.048689"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-03-26T10:31:13.153271" elapsed="0.048689"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:13.202956" level="INFO">Typing text '2' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[4]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.202956" elapsed="0.043241"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-03-26T10:31:13.202956" elapsed="0.044242"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:13.247198" level="INFO">Typing text '9' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[5]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.247198" elapsed="0.040083"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-03-26T10:31:13.247198" elapsed="0.040083"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:13.287281" level="INFO">Typing text '8' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[6]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.287281" elapsed="0.040671"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-03-26T10:31:13.287281" elapsed="0.040671"/>
+</iter>
+<var>${index}</var>
+<value>${pin_length}</value>
+<status status="PASS" start="2024-03-26T10:31:13.016490" elapsed="0.311462"/>
+</for>
+<kw name="Wait for process 7s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:20.328447" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:13.327952" elapsed="7.000495"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:13.327952" elapsed="7.000495"/>
+</kw>
+<arg>${value.email}</arg>
+<arg>${value.pin}</arg>
+<arg>${value.okta_url}</arg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.all_pin_field}</arg>
+<arg>${xpath.signIn_button}</arg>
+<status status="PASS" start="2024-03-26T10:30:58.646936" elapsed="21.682716"/>
+</kw>
+<kw name="Search Group Name" owner="group_of_assignment_feature">
+<kw name="Click 'Setting' tab" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.setting_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:20.329652" elapsed="0.041043"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:20.370695" level="INFO">Clicking element 'xpath=//ul[@role="menu"]/li/ul[@class="ant-menu-item-group-list"]/*[5]'.</msg>
+<arg>${group_of_assignment_main_page.setting_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:20.370695" elapsed="0.049393"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:20.329652" elapsed="0.090436"/>
+</kw>
+<kw name="Click 'Group of Assign Tag Management' tab" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.group_fo_assign_tag_management_menuItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:20.421090" elapsed="0.218096"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:20.639186" level="INFO">Clicking element 'xpath=//ul[@role="menu"]/li[@role="menuitem"]/span/div/div[contains(text(),'Group of Assign Tag Management')]'.</msg>
+<arg>${group_of_assignment_main_page.group_fo_assign_tag_management_menuItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:20.639186" elapsed="0.093158"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:20.420088" elapsed="0.312256"/>
+</kw>
+<kw name="Input 'Search Group' search field" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.search_group_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:20.733341" elapsed="0.233965"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:20.967306" level="INFO">Typing text 'NISSAN Assistance' into text field 'xpath=//span[@class="ant-input-affix-wrapper sc-fKgJPI oxoKX"]/input'.</msg>
+<arg>${group_of_assignment_main_page.search_group_inputField}</arg>
+<arg>${value_dealer.group_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:20.967306" elapsed="0.133004"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:23.102323" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:21.101340" elapsed="2.000983"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:21.101340" elapsed="2.000983"/>
+</kw>
+<kw name="Click Group Name" owner="group_of_assignment_main_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:23.102323" level="INFO">Clicking element 'xpath=//tbody[@class="ant-table-tbody"]/*[2]/td/div[contains(text(),'NISSAN Assistance')]'.</msg>
+<arg>xpath=//tbody[@class="ant-table-tbody"]/*[2]/td/div[contains(text(),'${value_dealer.group_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:23.102323" elapsed="0.069179"/>
+</kw>
+<arg>${value_dealer.group_name}</arg>
+<status status="PASS" start="2024-03-26T10:31:23.102323" elapsed="0.069179"/>
+</kw>
+<arg>${value_dealer.group_name}</arg>
+<status status="PASS" start="2024-03-26T10:31:20.732344" elapsed="2.439158"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:25.172334" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:23.171502" elapsed="2.000832"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:23.171502" elapsed="2.000832"/>
+</kw>
+<arg>${value_delete_dealer.group_name}</arg>
+<status status="PASS" start="2024-03-26T10:31:20.329652" elapsed="4.842682"/>
+</kw>
+<kw name="Search Assign Tag Name" owner="group_of_assignment_feature">
+<kw name="Input 'Search Assign Tag' search field" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.search_assign_tag_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:25.172334" elapsed="0.031491"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:25.203825" level="INFO">Typing text 'N204' into text field 'xpath=/html/body/div/div/div/section/section/section/main/div[2]/div[1]/div[1]/div/span/input'.</msg>
+<arg>${group_of_assignment_main_page.search_assign_tag_inputField}</arg>
+<arg>${value_dealer.assign_tag}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:25.203825" elapsed="0.055467"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:27.259676" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:25.259292" elapsed="2.000384"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:25.259292" elapsed="2.000384"/>
+</kw>
+<kw name="Click Assign Tag" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class="ant-table-body"]/..//tbody[@class="ant-table-tbody"]/tr/td/..//span[contains(text(),'${value_dealer.assign_tag}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:27.259676" elapsed="0.015632"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:27.275308" level="INFO">Clicking element 'xpath=//div[@class="ant-table-body"]/..//tbody[@class="ant-table-tbody"]/tr/td/..//span[contains(text(),'N204')]'.</msg>
+<arg>xpath=//div[@class="ant-table-body"]/..//tbody[@class="ant-table-tbody"]/tr/td/..//span[contains(text(),'${value_dealer.assign_tag}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:27.275308" elapsed="0.041791"/>
+</kw>
+<arg>${value_dealer.assign_tag}</arg>
+<status status="PASS" start="2024-03-26T10:31:27.259676" elapsed="0.057423"/>
+</kw>
+<arg>${value_dealer.assign_tag}</arg>
+<status status="PASS" start="2024-03-26T10:31:25.172334" elapsed="2.144765"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:29.318823" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:27.318124" elapsed="2.000699"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:27.318124" elapsed="2.000699"/>
+</kw>
+<arg>${value_delete_dealer.assign_tag}</arg>
+<status status="PASS" start="2024-03-26T10:31:25.172334" elapsed="4.146489"/>
+</kw>
+<kw name="Delete Member in Group" owner="group_of_assignment_feature">
+<for flavor="IN">
+<iter>
+<kw name="Input 'Search Member' search field" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.search_member_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:29.318823" elapsed="0.036760"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:29.355583" level="INFO">Typing text 'atiwit_nissan@tisco.co.th' into text field 'xpath=/html/body/div/div/div/section/section/section/main/div[2]/div[1]/div[1]/div/span/input'.</msg>
+<arg>${group_of_assignment_main_page.search_member_inputField}</arg>
+<arg>${dealer_member_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:29.355583" elapsed="0.075744"/>
+</kw>
+<arg>${member_name_list}</arg>
+<status status="PASS" start="2024-03-26T10:31:29.318823" elapsed="0.112504"/>
+</kw>
+<kw name="Select 'Checkbox' member list" owner="group_of_assignment_main_page">
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:34.431857" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:29.431327" elapsed="5.000530"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:29.431327" elapsed="5.000530"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:34.431857" level="INFO">Clicking element 'xpath=//th[@class="ant-table-cell ant-table-selection-column"]/..//input[@class="ant-checkbox-input"]'.</msg>
+<arg>${group_of_assignment_main_page.member_checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:34.431857" elapsed="0.066625"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:29.431327" elapsed="5.067155"/>
+</kw>
+<kw name="Click 'Delete Selected member' button" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.delete_member_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:34.498482" elapsed="0.021948"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:34.520430" level="INFO">Clicking element 'xpath=//main/..//button/span[contains(text(),'Delete Selected')]'.</msg>
+<arg>${group_of_assignment_main_page.delete_member_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:34.520430" elapsed="0.046973"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:34.498482" elapsed="0.070216"/>
+</kw>
+<kw name="Click 'Confirm to Delete' button" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.confirm_to_delete_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:34.569187" elapsed="0.247486"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:34.816673" level="INFO">Clicking element 'xpath=//div[@class="ant-modal-content"]/..//button/span[contains(text(),'Delete')]'.</msg>
+<arg>${group_of_assignment_main_page.confirm_to_delete_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:34.816673" elapsed="0.070142"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:34.568698" elapsed="0.318117"/>
+</kw>
+<kw name="Check 'Success (Delete member)' message" owner="group_of_assignment_main_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:36.887423" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:34.886815" elapsed="2.000608"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:34.886815" elapsed="2.000608"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page_text.success}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-26T10:31:36.887423" elapsed="0.015663"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page_text.deleted_member}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-26T10:31:36.903086" elapsed="0.015599"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:34.886815" elapsed="2.031870"/>
+</kw>
+<kw name="Clear text 'Search Member' search field" owner="group_of_assignment_main_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.search_member_inputField}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:36.918685" elapsed="0.028160"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:36.918685" elapsed="0.028160"/>
+</kw>
+<kw name="Wait for process 3s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:39.947518" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:36.946845" elapsed="3.000673"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:36.946845" elapsed="3.000673"/>
+</kw>
+<var name="${member_name_list}">atiwit_nissan@tisco.co.th</var>
+<status status="PASS" start="2024-03-26T10:31:29.318823" elapsed="10.628695"/>
+</iter>
+<var>${member_name_list}</var>
+<value>@{value_dealer.member_name}</value>
+<status status="PASS" start="2024-03-26T10:31:29.318823" elapsed="10.628695"/>
+</for>
+<arg>${value_delete_dealer.member_name}</arg>
+<status status="PASS" start="2024-03-26T10:31:29.318823" elapsed="10.628695"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-03-26T10:31:39.947518" elapsed="6.360598"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:30:58.646936" elapsed="47.661180"/>
+</test>
+<test id="s1-t2" name="Assign Dealer flow - Nissan" line="42">
+<kw name="Access to Octopus" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:46.308116" level="INFO">Opening browser 'Chrome' to base url 'https://octopus2.tbeta.co/line-login/login'.</msg>
+<arg>${value.okta_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-26T10:31:46.308116" elapsed="3.410528"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-26T10:31:49.718644" elapsed="0.117580"/>
+</kw>
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:31:54.836818" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:49.836224" elapsed="5.000594"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:49.836224" elapsed="5.000594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath.email_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:31:54.836818" elapsed="0.031265"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:54.868083" level="INFO">Typing text 'atiwit_nissan@tisco.co.th' into text field 'xpath=//input[@id="username"]'.</msg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:54.868083" elapsed="0.140979"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:31:55.010064" level="INFO">Clicking element 'xpath=/html/body/div/div/div/section/main/div/div/div[1]/div/div[2]/div[4]/div/button'.</msg>
+<arg>${xpath.signIn_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:31:55.009062" elapsed="0.028647"/>
+</kw>
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:00.038254" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:31:55.037709" elapsed="5.000545"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:55.037709" elapsed="5.000545"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-03-26T10:32:00.038254" level="INFO">Length is 6.</msg>
+<msg time="2024-03-26T10:32:00.038254" level="INFO">${pin_length} = 6</msg>
+<var>${pin_length}</var>
+<arg>${value.pin}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.038254" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:00.038254" level="INFO">Typing text '1' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[1]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.038254" elapsed="0.098828"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-03-26T10:32:00.038254" elapsed="0.098828"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:00.137082" level="INFO">Typing text '7' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[2]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.137082" elapsed="0.049070"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-03-26T10:32:00.137082" elapsed="0.049625"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:00.186707" level="INFO">Typing text '1' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[3]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.186707" elapsed="0.040309"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-03-26T10:32:00.186707" elapsed="0.040309"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:00.227016" level="INFO">Typing text '2' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[4]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.227016" elapsed="0.043097"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-03-26T10:32:00.227016" elapsed="0.043097"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:00.270113" level="INFO">Typing text '9' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[5]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.270113" elapsed="0.051000"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-03-26T10:32:00.270113" elapsed="0.051000"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:00.321113" level="INFO">Typing text '8' into text field 'xpath=/html/body/div/div/div/section/main/div/div[1]/div/div[2]/div/div/div[2]/div/div/swd-pin-field/input[6]'.</msg>
+<arg>${value.all_pin_field}[${index}]</arg>
+<arg>${value.pin}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.321113" elapsed="0.032462"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-03-26T10:32:00.321113" elapsed="0.032462"/>
+</iter>
+<var>${index}</var>
+<value>${pin_length}</value>
+<status status="PASS" start="2024-03-26T10:32:00.038254" elapsed="0.315321"/>
+</for>
+<kw name="Wait for process 7s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:07.354515" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:00.353575" elapsed="7.000940"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:00.353575" elapsed="7.000940"/>
+</kw>
+<arg>${value.email}</arg>
+<arg>${value.pin}</arg>
+<arg>${value.okta_url}</arg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.all_pin_field}</arg>
+<arg>${xpath.signIn_button}</arg>
+<status status="PASS" start="2024-03-26T10:31:46.308116" elapsed="21.046399"/>
+</kw>
+<kw name="Search Group Name" owner="group_of_assignment_feature">
+<kw name="Click 'Setting' tab" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.setting_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:07.354515" elapsed="0.050094"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:07.404609" level="INFO">Clicking element 'xpath=//ul[@role="menu"]/li/ul[@class="ant-menu-item-group-list"]/*[5]'.</msg>
+<arg>${group_of_assignment_main_page.setting_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:07.404609" elapsed="0.066925"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:07.354515" elapsed="0.118017"/>
+</kw>
+<kw name="Click 'Group of Assign Tag Management' tab" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.group_fo_assign_tag_management_menuItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:07.472532" elapsed="0.216570"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:07.689102" level="INFO">Clicking element 'xpath=//ul[@role="menu"]/li[@role="menuitem"]/span/div/div[contains(text(),'Group of Assign Tag Management')]'.</msg>
+<arg>${group_of_assignment_main_page.group_fo_assign_tag_management_menuItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:07.689102" elapsed="0.116690"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:07.472532" elapsed="0.333260"/>
+</kw>
+<kw name="Input 'Search Group' search field" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.search_group_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:07.806766" elapsed="0.223016"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:08.029782" level="INFO">Typing text 'NISSAN Assistance' into text field 'xpath=//span[@class="ant-input-affix-wrapper sc-fKgJPI oxoKX"]/input'.</msg>
+<arg>${group_of_assignment_main_page.search_group_inputField}</arg>
+<arg>${value_dealer.group_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:08.029782" elapsed="0.122425"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:10.154035" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:08.153216" elapsed="2.000819"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:08.152207" elapsed="2.001828"/>
+</kw>
+<kw name="Click Group Name" owner="group_of_assignment_main_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:10.156676" level="INFO">Clicking element 'xpath=//tbody[@class="ant-table-tbody"]/*[2]/td/div[contains(text(),'NISSAN Assistance')]'.</msg>
+<arg>xpath=//tbody[@class="ant-table-tbody"]/*[2]/td/div[contains(text(),'${value_dealer.group_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:10.156676" elapsed="0.067186"/>
+</kw>
+<arg>${value_dealer.group_name}</arg>
+<status status="PASS" start="2024-03-26T10:32:10.154035" elapsed="0.069827"/>
+</kw>
+<arg>${value_dealer.group_name}</arg>
+<status status="PASS" start="2024-03-26T10:32:07.805792" elapsed="2.418070"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:12.224629" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:10.223862" elapsed="2.000767"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:10.223862" elapsed="2.000767"/>
+</kw>
+<arg>${value_assign_dealer.group_name}</arg>
+<status status="PASS" start="2024-03-26T10:32:07.354515" elapsed="4.870114"/>
+</kw>
+<kw name="Search Assign Tag Name" owner="group_of_assignment_feature">
+<kw name="Input 'Search Assign Tag' search field" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.search_assign_tag_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:12.224629" elapsed="0.029700"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:12.254329" level="INFO">Typing text 'N205' into text field 'xpath=/html/body/div/div/div/section/section/section/main/div[2]/div[1]/div[1]/div/span/input'.</msg>
+<arg>${group_of_assignment_main_page.search_assign_tag_inputField}</arg>
+<arg>${value_dealer.assign_tag}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:12.254329" elapsed="0.059874"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:14.316313" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:12.315222" elapsed="2.001091"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:12.314203" elapsed="2.002110"/>
+</kw>
+<kw name="Click Assign Tag" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class="ant-table-body"]/..//tbody[@class="ant-table-tbody"]/tr/td/..//span[contains(text(),'${value_dealer.assign_tag}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:14.316313" elapsed="0.031268"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:14.347581" level="INFO">Clicking element 'xpath=//div[@class="ant-table-body"]/..//tbody[@class="ant-table-tbody"]/tr/td/..//span[contains(text(),'N205')]'.</msg>
+<arg>xpath=//div[@class="ant-table-body"]/..//tbody[@class="ant-table-tbody"]/tr/td/..//span[contains(text(),'${value_dealer.assign_tag}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:14.347581" elapsed="0.041554"/>
+</kw>
+<arg>${value_dealer.assign_tag}</arg>
+<status status="PASS" start="2024-03-26T10:32:14.316313" elapsed="0.072822"/>
+</kw>
+<arg>${value_dealer.assign_tag}</arg>
+<status status="PASS" start="2024-03-26T10:32:12.224629" elapsed="2.164506"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:16.389619" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:14.389135" elapsed="2.000484"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:14.389135" elapsed="2.000484"/>
+</kw>
+<arg>${value_assign_dealer.assign_tag}</arg>
+<status status="PASS" start="2024-03-26T10:32:12.224629" elapsed="4.164990"/>
+</kw>
+<kw name="Add Member in Group" owner="group_of_assignment_feature">
+<for flavor="IN">
+<iter>
+<kw name="Click 'Add member' button" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.add_member_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:16.389619" elapsed="0.021393"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:16.418510" level="INFO">Clicking element 'xpath=//main/..//button/span[contains(text(),'Add Member')]'.</msg>
+<arg>${group_of_assignment_main_page.add_member_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:16.418510" elapsed="0.050998"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:16.389619" elapsed="0.079889"/>
+</kw>
+<kw name="Input 'Add member' input field" owner="group_of_assignment_main_page">
+<kw name="Wait for process 3s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:19.471176" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:16.470507" elapsed="3.000669"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:16.470507" elapsed="3.000669"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:19.471176" level="INFO">Clicking element 'xpath=//input[@id="rc_select_2"]'.</msg>
+<arg>${group_of_assignment_main_page.add_member_inputField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:19.471176" elapsed="0.084900"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:19.556076" level="INFO">Typing text 'atiwit_nissan@tisco.co.th' into text field 'xpath=//input[@id="rc_select_2"]'.</msg>
+<arg>${group_of_assignment_main_page.add_member_inputField}</arg>
+<arg>${value_dealer.member_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:19.556076" elapsed="0.075733"/>
+</kw>
+<arg>${member_name_list}</arg>
+<status status="PASS" start="2024-03-26T10:32:16.469508" elapsed="3.162301"/>
+</kw>
+<kw name="Select 'Member' Dropdown list" owner="group_of_assignment_main_page">
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:24.631904" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:19.631809" elapsed="5.000095"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:19.631809" elapsed="5.000095"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@name="${value_dealer.member_name}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:24.631904" elapsed="0.015642"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:24.647546" level="INFO">Clicking element 'xpath=//div[@name="atiwit_nissan@tisco.co.th"]'.</msg>
+<arg>xpath=//div[@name="${value_dealer.member_name}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:24.647546" elapsed="0.048784"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:26.698035" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:24.697332" elapsed="2.000703"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:24.696330" elapsed="2.001705"/>
+</kw>
+<arg>${member_name_list}</arg>
+<status status="PASS" start="2024-03-26T10:32:19.631809" elapsed="7.066226"/>
+</kw>
+<kw name="Click 'Confirm' button" owner="group_of_assignment_main_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page.confirm_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-26T10:32:26.698035" elapsed="0.024708"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-26T10:32:26.722743" level="INFO">Clicking element 'xpath=//span[contains(text(),'Confirm')]'.</msg>
+<arg>${group_of_assignment_main_page.confirm_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-26T10:32:26.722743" elapsed="0.060410"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:26.698035" elapsed="0.085118"/>
+</kw>
+<kw name="Check 'Success (Add member)' message" owner="group_of_assignment_main_page">
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:28.784428" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:26.783153" elapsed="2.001275"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:26.783153" elapsed="2.001275"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page_text.success}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-26T10:32:28.784428" elapsed="0.015769"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${group_of_assignment_main_page_text.add_member}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-26T10:32:28.800197" elapsed="0.011083"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:26.783153" elapsed="2.028127"/>
+</kw>
+<kw name="Wait for process 3s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-26T10:32:31.811524" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-26T10:32:28.811280" elapsed="3.000244"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:32:28.811280" elapsed="3.000244"/>
+</kw>
+<var name="${member_name_list}">atiwit_nissan@tisco.co.th</var>
+<status status="PASS" start="2024-03-26T10:32:16.389619" elapsed="15.421905"/>
+</iter>
+<var>${member_name_list}</var>
+<value>@{value_dealer.member_name}</value>
+<status status="PASS" start="2024-03-26T10:32:16.389619" elapsed="15.421905"/>
+</for>
+<arg>${value_assign_dealer.member_name}</arg>
+<status status="PASS" start="2024-03-26T10:32:16.389619" elapsed="15.421905"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-03-26T10:32:31.811524" elapsed="6.408287"/>
+</kw>
+<status status="PASS" start="2024-03-26T10:31:46.308116" elapsed="51.915170"/>
+</test>
+<status status="PASS" start="2024-03-26T10:30:57.548312" elapsed="100.674974"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Assign Nissan Dealer">Assign Nissan Dealer</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-26T10:30:58.634591" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\common.robot' on line 4: Setting variable '${common.app_isp_partner}' failed: Resolving variable '${value.partner_search}' failed: Variable '${value}' not found. Did you mean:
+    ${value.pin}</msg>
+<msg time="2024-03-26T10:30:58.634591" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\common.robot' on line 3: Setting variable '${common.MyProtection}' failed: Resolving variable '${value.MyProtection}' failed: Variable '${value}' not found. Did you mean:
+    ${value.pin}</msg>
+<msg time="2024-03-26T10:30:58.634591" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\retrieve_claim_information_page.robot' on line 13: Setting variable '${retrieve_claim_info_page.accident_province_dropdown}' failed: Resolving variable '${value_claim_info.accident_province}' failed: Variable '${value_claim_info}' not found.</msg>
+<msg time="2024-03-26T10:30:58.634591" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\retrieve_claim_information_page.robot' on line 7: Setting variable '${retrieve_claim_info_page.brand_dropdown}' failed: Resolving variable '${value_claim_info.brand}' failed: Variable '${value_claim_info}' not found.</msg>
+<msg time="2024-03-26T10:30:58.643780" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\retrieve_claim_information_page.robot' on line 18: Setting variable '${retrieve_claim_info_page.customer_province_dropdown}' failed: Resolving variable '${value_claim_info.customer_province}' failed: Variable '${value_claim_info}' not found.</msg>
+<msg time="2024-03-26T10:30:58.646936" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\retrieve_claim_information_page.robot' on line 9: Setting variable '${retrieve_claim_info_page.model_dropdown}' failed: Resolving variable '${value_claim_info.model}' failed: Variable '${value_claim_info}' not found.</msg>
+</errors>
+</robot>

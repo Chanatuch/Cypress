@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-05-16T11:28:04.602900" rpa="false" schemaversion="5">
+<suite id="s1" name="Rm-Search Import Eir File" source="C:\Users\ZAtiwit\Documents\Automate\Claim\testcase\state2\my_protection\report_management\rm-search_import_eir_file.robot">
+<test id="s1-t1" name="SearchEIRFile_flow - Search EIR File by All Field" line="27">
+<kw name="Access to My Protection" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:28:06.274073" level="INFO">Opening browser 'Chrome' to base url 'https://beta-tisco.okta.com/'.</msg>
+<arg>${value.okta_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T11:28:06.274073" elapsed="6.848342"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T11:28:13.122415" elapsed="0.110301"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:28:23.233284" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:28:13.232716" elapsed="10.000568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath.email_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:28:23.233284" elapsed="0.046919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:28:23.280203" level="INFO">Typing text 'zatiwit@tisco.co.th' into text field 'xpath=//input[@name="identifier"]'.</msg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:28:23.280203" elapsed="0.086363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath.password_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:28:23.366566" elapsed="0.011222"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:28:23.377788" level="INFO">Typing text 'Dream171298*' into text field 'xpath=//input[@name="credentials.passcode"]'.</msg>
+<arg>${xpath.password_inputField}</arg>
+<arg>${value.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:28:23.377788" elapsed="0.077059"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:28:23.454847" level="INFO">Clicking element 'xpath=//input[@value="Sign in"]'.</msg>
+<arg>${xpath.signIn_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:28:23.454847" elapsed="0.039219"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:28:33.494611" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:28:23.494214" elapsed="10.000397"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.search_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:28:33.494611" elapsed="0.031271"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:28:33.525882" level="INFO">Typing text '(RDBMS) Protection Platform - State2 (OpenID)' into text field 'xpath=//input[@name="dashboard-search-input"]'.</msg>
+<arg>${common.search_textField}</arg>
+<arg>${value.MyProtection}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:28:33.525882" elapsed="0.203570"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.MyProtection}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:28:33.729452" elapsed="0.017651"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:28:33.748131" level="INFO">Clicking element 'xpath=//span[contains(text(),'(RDBMS) Protection Platform - State2 (OpenID)')]'.</msg>
+<arg>${common.MyProtection}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:28:33.748131" elapsed="0.057366"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:28:35.809231" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:28:33.805497" elapsed="2.003734"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:28:33.805497" elapsed="2.003734"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${value.MyProtection_title}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:28:35.809231" elapsed="3.621700"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:28:54.431744" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:28:39.430931" elapsed="15.000813"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-05-16T11:28:54.431744" level="INFO">${value_common.email} = zatiwit@tisco.co.th</msg>
+<arg>${value_common.email}</arg>
+<arg>${value.email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-05-16T11:28:54.431744" elapsed="0.000000"/>
+</kw>
+<arg>${value.email}</arg>
+<arg>${value.password}</arg>
+<arg>${value.okta_url}</arg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${xpath.password_inputField}</arg>
+<arg>${xpath.signIn_button}</arg>
+<arg>${value.MyProtection}</arg>
+<status status="PASS" start="2024-05-16T11:28:06.274073" elapsed="48.157671"/>
+</kw>
+<kw name="Click 'Import EIR File' tab" owner="common">
+<kw name="Wait for process 7s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:01.432594" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:28:54.431744" elapsed="7.000850"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:28:54.431744" elapsed="7.000850"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.report_management_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:01.434246" elapsed="0.046912"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:01.481158" level="INFO">Clicking element 'xpath=//div[@tc-menu-id="P568"]/..//span[contains(text(),'Report Management')]'.</msg>
+<arg>${common.report_management_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:01.481158" elapsed="0.056585"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:03.539062" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:01.538630" elapsed="2.000432"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:01.538630" elapsed="2.001450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${common.import_eir_file_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:03.540080" elapsed="0.031276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:03.571356" level="INFO">Clicking element 'xpath=//div[@tc-child-menu-id="P568"]/div[@tc-child-id="9584a55d-5a1e-4301-932b-94accc79e741"]/..//span[contains(text(),'File Import')]'.</msg>
+<arg>${common.import_eir_file_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:03.571356" elapsed="0.074197"/>
+</kw>
+<kw name="Wait for process 5s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:08.646340" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:03.645553" elapsed="5.000787"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:03.645553" elapsed="5.000787"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:28:54.431744" elapsed="14.214596"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:13.646910" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:08.646340" elapsed="5.000570"/>
+</kw>
+<kw name="Search All Field for 'EIR file'" owner="import_eir_file_feature">
+<kw name="Input 'EIR file name' field" owner="import_eir_file_main_page">
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:14.647507" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:13.646910" elapsed="1.000597"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:13.646910" elapsed="1.000597"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${import_eir_file_main_page.eir_file_name_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:14.647507" elapsed="0.029200"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:14.676707" level="INFO">Typing text 'EIR_MonthlyReport022024.XLS' into text field 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-b8f8d9f2-235b-4f9f-9759-0e649c8fb90c/mbs-templates-main/mbs-templates-upload/div[1]/div/div[1]/div/input'.</msg>
+<arg>${import_eir_file_main_page.eir_file_name_field}</arg>
+<arg>${search_eir_file.eir_file_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:14.676707" elapsed="0.227498"/>
+</kw>
+<arg>${search_eir_file.eir_file_name}</arg>
+<status status="PASS" start="2024-05-16T11:29:13.646910" elapsed="1.257295"/>
+</kw>
+<kw name="Input 'Import Date' field" owner="import_eir_file_main_page">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-16T11:29:14.904205" level="INFO">${import_date_ranges} = [['5', 'May', '2024'], ['9', 'May', '2024']]</msg>
+<var>${import_date_ranges}</var>
+<arg>${search_eir_file.import_date_first}</arg>
+<arg>${search_eir_file.import_date_last}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-16T11:29:14.904205" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${import_eir_file_main_page.import_eir_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:14.904205" elapsed="0.025169"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:14.929374" level="INFO">Clicking element 'xpath=/html/body/app-root/app-app-code/home-master-page/div/div[2]/div[2]/div/flow-controller-page/div/div/div[1]/screen-node-page/div/div/div/mbs-b8f8d9f2-235b-4f9f-9759-0e649c8fb90c/mbs-templates-main/mbs-templates-upload/div[1]/div/div[2]/mbs-widget-date-between/div/div/span/div/i'.</msg>
+<arg>${import_eir_file_main_page.import_eir_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:14.929374" elapsed="0.051773"/>
+</kw>
+<kw name="Wait for process 2s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:16.981587" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:14.981147" elapsed="2.000440"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:14.981147" elapsed="2.000440"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${import_eir_file_main_page.year_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:16.983159" elapsed="0.031283"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:17.014442" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[1]/div/button/span/span'.</msg>
+<arg>${import_eir_file_main_page.year_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:17.014442" elapsed="0.066615"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td/span[contains(text(),'${import_eir_date}[2]')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:17.081057" elapsed="0.017668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:17.098725" level="INFO">Clicking element 'xpath=//td/span[contains(text(),'2024')]'.</msg>
+<arg>xpath=//td/span[contains(text(),'${import_eir_date}[2]')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:17.098725" elapsed="0.030788"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:18.130364" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:17.129513" elapsed="1.000851"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:17.129513" elapsed="1.000851"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:18.130364" elapsed="0.031302"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:18.161666" level="INFO">Clicking element 'xpath=//td[@aria-label="May 2024"]'.</msg>
+<arg>xpath=//td[@aria-label="${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:18.161666" elapsed="0.039796"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:19.202006" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:18.201462" elapsed="1.000544"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:18.201462" elapsed="1.000544"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${import_eir_date}[0] ${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:19.202006" elapsed="0.015660"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:19.217666" level="INFO">Clicking element 'xpath=//td[@aria-label="5 May 2024"]'.</msg>
+<arg>xpath=//td[@aria-label="${import_eir_date}[0] ${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:19.217666" elapsed="0.038478"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:20.256729" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:19.256144" elapsed="1.000585"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:19.256144" elapsed="1.000585"/>
+</kw>
+<var name="${import_eir_date}">['5', 'May', '2024']</var>
+<status status="PASS" start="2024-05-16T11:29:16.983159" elapsed="3.273570"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${import_eir_file_main_page.year_calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:20.256729" elapsed="0.015745"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:20.272474" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[1]/div/button/span/span'.</msg>
+<arg>${import_eir_file_main_page.year_calendar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:20.272474" elapsed="0.047261"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td/span[contains(text(),'${import_eir_date}[2]')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:20.319735" elapsed="0.008742"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:20.328477" level="INFO">Clicking element 'xpath=//td/span[contains(text(),'2024')]'.</msg>
+<arg>xpath=//td/span[contains(text(),'${import_eir_date}[2]')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:20.328477" elapsed="0.033509"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:21.362622" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:20.361986" elapsed="1.000636"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:20.361986" elapsed="1.000636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:21.362622" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:21.362622" level="INFO">Clicking element 'xpath=//td[@aria-label="May 2024"]'.</msg>
+<arg>xpath=//td[@aria-label="${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:21.362622" elapsed="0.046876"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:22.411131" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:21.409498" elapsed="1.001633"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:21.409498" elapsed="1.001633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//td[@aria-label="${import_eir_date}[0] ${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:22.411131" elapsed="0.015646"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:22.426777" level="INFO">Clicking element 'xpath=//td[@aria-label="9 May 2024"]'.</msg>
+<arg>xpath=//td[@aria-label="${import_eir_date}[0] ${import_eir_date}[1] ${import_eir_date}[2]"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:29:22.426777" elapsed="0.051704"/>
+</kw>
+<kw name="Wait for process 1s" owner="common">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:23.480852" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:22.479487" elapsed="1.001365"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:29:22.478481" elapsed="1.002371"/>
+</kw>
+<var name="${import_eir_date}">['9', 'May', '2024']</var>
+<status status="PASS" start="2024-05-16T11:29:20.256729" elapsed="3.224123"/>
+</iter>
+<var>${import_eir_date}</var>
+<value>@{import_date_ranges}</value>
+<status status="PASS" start="2024-05-16T11:29:16.983159" elapsed="6.497693"/>
+</for>
+<arg>${search_eir_file.import_date_first}</arg>
+<arg>${search_eir_file.import_date_last}</arg>
+<status status="PASS" start="2024-05-16T11:29:14.904205" elapsed="8.576647"/>
+</kw>
+<arg>${search_eir_file.eir_file_name}</arg>
+<arg>${search_eir_file.import_date_first}</arg>
+<arg>${search_eir_file.import_date_last}</arg>
+<status status="PASS" start="2024-05-16T11:29:13.646910" elapsed="9.833942"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-16T11:29:28.481199" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-16T11:29:23.480852" elapsed="5.000347"/>
+</kw>
+<kw name="Verify &quot;FOUND / NOT FOUND&quot; searching result for 'EIR file name' column" owner="import_eir_file_main_page">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:29:28.481199" level="INFO">Element 'Not Found' did not exist.</msg>
+<arg>${value.not_found}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.000000"/>
+</kw>
+<msg time="2024-05-16T11:29:28.481199" level="INFO">${Result} = True</msg>
+<var>${Result}</var>
+<arg>SeleniumLibrary.Element Should Not Be Visible</arg>
+<arg>${value.not_found}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-05-16T11:29:28.481199" level="INFO">${column_eir_file_name_values} = []</msg>
+<var>${column_eir_file_name_values}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result}' == 'True'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${search_eir_file.eir_file_name}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.037530"/>
+</kw>
+<msg time="2024-05-16T11:29:28.518729" level="INFO">${Result_search_eir_file_success} = True</msg>
+<var>${Result_search_eir_file_success}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains</arg>
+<arg>${search_eir_file.eir_file_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.037530"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_search_eir_file_success}' != 'True'">
+<kw name="Fail" owner="BuiltIn">
+<arg>Search EIR Name: ${search_eir_file.eir_file_name} not found</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-16T11:29:28.518729" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-16T11:29:28.518729" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-16T11:29:28.518729" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.037530"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>ไม่พบข้อมูล</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-05-16T11:29:28.518729" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-16T11:29:28.518729" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.037530"/>
+</if>
+<status status="PASS" start="2024-05-16T11:29:28.481199" elapsed="0.037530"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-05-16T11:29:28.518729" elapsed="6.465848"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:28:06.274073" elapsed="88.710504"/>
+</test>
+<status status="PASS" start="2024-05-16T11:28:04.602900" elapsed="90.381677"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Rm-Search Import Eir File">Rm-Search Import Eir File</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-16T11:28:06.189694" level="WARN">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\common.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-16T11:28:06.262959" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\common.robot' on line 4: Setting variable '${common.app_isp_partner}' failed: Resolving variable '${value.partner_search}' failed: Variable '${value}' not found.</msg>
+<msg time="2024-05-16T11:28:06.262959" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\claim_service\retrieve_claim_information_page.robot' on line 17: Setting variable '${retrieve_claim_info_page.accident_province_dropdown}' failed: Resolving variable '${value_claim_info.accident_province}' failed: Variable '${value_claim_info}' not found.</msg>
+<msg time="2024-05-16T11:28:06.262959" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\claim_service\retrieve_claim_information_page.robot' on line 11: Setting variable '${retrieve_claim_info_page.brand_dropdown}' failed: Resolving variable '${value_claim_info.brand}' failed: Variable '${value_claim_info}' not found.</msg>
+<msg time="2024-05-16T11:28:06.262959" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\claim_service\retrieve_claim_information_page.robot' on line 22: Setting variable '${retrieve_claim_info_page.customer_province_dropdown}' failed: Resolving variable '${value_claim_info.customer_province}' failed: Variable '${value_claim_info}' not found.</msg>
+<msg time="2024-05-16T11:28:06.262959" level="ERROR">Error in file 'C:\Users\ZAtiwit\Documents\Automate\Claim\keyword\myprotection\tab\claim_service\retrieve_claim_information_page.robot' on line 13: Setting variable '${retrieve_claim_info_page.model_dropdown}' failed: Resolving variable '${value_claim_info.model}' failed: Variable '${value_claim_info}' not found.</msg>
+</errors>
+</robot>

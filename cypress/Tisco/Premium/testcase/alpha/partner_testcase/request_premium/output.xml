@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.7.9 on win32)" generated="20231215 17:15:58.968" rpa="false" schemaversion="4">
+<suite id="s1" name="Partner Dashboard" source="\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\testcase\beta-state2\partner_testcase\request_premium\partner_dashboard.robot">
+<test id="s1-t1" name="Dashboard_VerifyValueflow(Partner) - ตรวจสอบจำนวนค่าต่างๆในแต่ละ card" line="25">
+<kw name="Access to Partner Check Premium application" library="common" type="SETUP">
+<arg>${value.partner_username}</arg>
+<arg>${value.partner_password}</arg>
+<arg>${value.partner_url}</arg>
+<arg>${xpath.partner_username_inputField}</arg>
+<arg>${xpath.partner_password_inputField}</arg>
+<arg>${xpath.submit_username_button}</arg>
+<arg>${xpath.password_login_button}</arg>
+<arg>${xpath.sign_in_button}</arg>
+<arg>${value.partner_search}</arg>
+<arg>${xpath.partner_search_textField}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${value.partner_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231215 17:16:08.506" level="INFO">Opening browser 'Chrome' to base url 'https://user-management.tbeta.co/partner-login/login?ptid=Insurance_Portal'.</msg>
+<msg timestamp="20231215 17:16:11.125" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python37\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.71); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231215 17:16:08.505" endtime="20231215 17:16:16.098"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231215 17:16:16.099" endtime="20231215 17:16:16.242"/>
+</kw>
+<kw name="Wait for process 8s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:24.245" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:16.243" endtime="20231215 17:16:24.245"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:16.242" endtime="20231215 17:16:24.245"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.partner_username_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:24.245" endtime="20231215 17:16:24.291"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.partner_username_inputField}</arg>
+<arg>${value.partner_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:24.293" level="INFO">Typing text 'lmgStaff1@tisco.co.th' into text field 'xpath=//input[@id="username"]'.</msg>
+<status status="PASS" starttime="20231215 17:16:24.292" endtime="20231215 17:16:24.667"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.submit_username_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:24.668" endtime="20231215 17:16:24.711"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${xpath.submit_username_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:24.714" level="INFO">Clicking button 'xpath=//button[@data-testid="submit-username"]'.</msg>
+<status status="PASS" starttime="20231215 17:16:24.712" endtime="20231215 17:16:24.842"/>
+</kw>
+<kw name="Wait for process 2s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:26.846" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:24.843" endtime="20231215 17:16:26.846"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:24.843" endtime="20231215 17:16:26.846"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.password_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:26.846" endtime="20231215 17:16:26.886"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${xpath.password_login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:26.887" level="INFO">Clicking button 'xpath=//button[@data-testid="password-login-btn"]'.</msg>
+<status status="PASS" starttime="20231215 17:16:26.886" endtime="20231215 17:16:27.028"/>
+</kw>
+<kw name="Wait for process 2s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:29.031" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:27.030" endtime="20231215 17:16:29.031"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:27.029" endtime="20231215 17:16:29.031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.partner_password_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:29.032" endtime="20231215 17:16:29.074"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.partner_password_inputField}</arg>
+<arg>${value.partner_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:29.076" level="INFO">Typing text 'P@$$w0rd01' into text field 'xpath=//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20231215 17:16:29.075" endtime="20231215 17:16:29.314"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.sign_in_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:29.315" endtime="20231215 17:16:29.352"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${xpath.sign_in_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:29.353" level="INFO">Clicking button 'xpath=//button[@data-testid="submit-username"]'.</msg>
+<status status="PASS" starttime="20231215 17:16:29.352" endtime="20231215 17:16:29.479"/>
+</kw>
+<kw name="Wait for process 8s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:37.483" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:29.481" endtime="20231215 17:16:37.483"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:29.480" endtime="20231215 17:16:37.483"/>
+</kw>
+<kw name="Search and open Partner check premium browser" library="common">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.partner_search_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:37.484" endtime="20231215 17:16:37.536"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.partner_search_textField}</arg>
+<arg>${value.partner_search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:37.538" level="INFO">Typing text 'app_isp_partner_state2' into text field 'xpath=//input[@name="search"]'.</msg>
+<status status="PASS" starttime="20231215 17:16:37.537" endtime="20231215 17:16:37.927"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.app_isp_partner}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:37.927" endtime="20231215 17:16:39.254"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.app_isp_partner}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:39.257" level="INFO">Clicking element 'xpath=//li[@role="menuitem"]/..//p[contains(text(),'app_isp_partner_state2')]'.</msg>
+<status status="PASS" starttime="20231215 17:16:39.256" endtime="20231215 17:16:39.460"/>
+</kw>
+<kw name="Wait for process 10s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:49.463" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:39.461" endtime="20231215 17:16:49.463"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:39.460" endtime="20231215 17:16:49.463"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${value.premium_title}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231215 17:16:49.463" endtime="20231215 17:16:49.603"/>
+</kw>
+<kw name="Wait for process 5s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:54.604" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:49.604" endtime="20231215 17:16:54.604"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:49.603" endtime="20231215 17:16:54.604"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:37.483" endtime="20231215 17:16:54.604"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:08.503" endtime="20231215 17:16:54.604"/>
+</kw>
+<kw name="Click (Partner) Dashboard tab" library="common">
+<kw name="Wait for process 4s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:16:58.608" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:54.607" endtime="20231215 17:16:58.608"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:54.607" endtime="20231215 17:16:58.608"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.partner_dashboard_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 17:16:58.608" endtime="20231215 17:16:58.651"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.partner_dashboard_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 17:16:58.652" level="INFO">Clicking element 'xpath=//div[@class="item-menu show-menu"]/..//span[contains(text(),'แดชบอร์ด')]'.</msg>
+<status status="PASS" starttime="20231215 17:16:58.651" endtime="20231215 17:16:58.740"/>
+</kw>
+<kw name="Wait for process 5s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 17:17:03.743" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231215 17:16:58.741" endtime="20231215 17:17:03.743"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:58.740" endtime="20231215 17:17:03.743"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:54.606" endtime="20231215 17:17:03.743"/>
+</kw>
+<kw name="Verify &quot;all values&quot; in &quot;New items&quot; card" library="partner_dashboard_feature">
+<kw name="Get &quot;(Normal) New items&quot; value" library="partner_dashboard_main_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_normal_new_items_value}</var>
+<arg>${partner_dashboard_main_page.normal_new_items_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 17:17:03.802" level="INFO">${get_normal_new_items_value} = 5</msg>
+<status status="PASS" starttime="20231215 17:17:03.747" endtime="20231215 17:17:03.802"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${partner_dashboard.normal_new_items_value}</arg>
+<arg>${get_normal_new_items_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231215 17:17:03.845" level="INFO">${partner_dashboard.normal_new_items_value} = 5</msg>
+<status status="PASS" starttime="20231215 17:17:03.803" endtime="20231215 17:17:03.845"/>
+</kw>
+<status status="PASS" starttime="20231215 17:17:03.746" endtime="20231215 17:17:03.846"/>
+</kw>
+<kw name="Get &quot;(Urgent) New items&quot; value" library="partner_dashboard_main_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_urgent_new_items_value}</var>
+<arg>${partner_dashboard_main_page.urgent_new_items_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 17:17:03.880" level="INFO">${get_urgent_new_items_value} = 1</msg>
+<status status="PASS" starttime="20231215 17:17:03.847" endtime="20231215 17:17:03.880"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${partner_dashboard.urgent_new_items_value}</arg>
+<arg>${get_urgent_new_items_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231215 17:17:03.903" level="INFO">${partner_dashboard.urgent_new_items_value} = 1</msg>
+<status status="PASS" starttime="20231215 17:17:03.881" endtime="20231215 17:17:03.903"/>
+</kw>
+<status status="PASS" starttime="20231215 17:17:03.846" endtime="20231215 17:17:03.903"/>
+</kw>
+<kw name="Verify &quot;(Total) New items&quot; value" library="partner_dashboard_main_page">
+<kw name="Convert To Number" library="BuiltIn">
+<var>${number_normal_new_items_value}</var>
+<arg>${partner_dashboard.normal_new_items_value}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20231215 17:17:03.905" level="INFO">${number_normal_new_items_value} = 5.0</msg>
+<status status="PASS" starttime="20231215 17:17:03.904" endtime="20231215 17:17:03.905"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${number_urgent_new_items_value}</var>
+<arg>${partner_dashboard.urgent_new_items_value}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20231215 17:17:03.905" level="INFO">${number_urgent_new_items_value} = 1.0</msg>
+<status status="PASS" starttime="20231215 17:17:03.905" endtime="20231215 17:17:03.906"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${calculate_total_new_items_value}</var>
+<arg>${number_normal_new_items_value} + ${number_urgent_new_items_value}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231215 17:17:03.906" level="INFO">${calculate_total_new_items_value} = 6.0</msg>
+<status status="PASS" starttime="20231215 17:17:03.906" endtime="20231215 17:17:03.906"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_total_new_items_value}</var>
+<arg>${partner_dashboard_main_page.total_new_items_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 17:17:03.938" level="INFO">${get_total_new_items_value} = 6</msg>
+<status status="PASS" starttime="20231215 17:17:03.907" endtime="20231215 17:17:03.938"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${get_total_new_items_value}</arg>
+<arg>${calculate_total_new_items_value}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231215 17:17:03.939" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231215 17:17:03.938" endtime="20231215 17:17:03.939"/>
+</kw>
+<status status="PASS" starttime="20231215 17:17:03.903" endtime="20231215 17:17:03.939"/>
+</kw>
+<status status="PASS" starttime="20231215 17:17:03.744" endtime="20231215 17:17:03.939"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231215 17:17:03.940" endtime="20231215 17:17:10.590"/>
+</kw>
+<status status="PASS" starttime="20231215 17:16:08.498" endtime="20231215 17:17:10.593"/>
+</test>
+<status status="PASS" starttime="20231215 17:15:58.986" endtime="20231215 17:17:10.595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Partner Dashboard">Partner Dashboard</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231215 17:16:00.858" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\common.robot' on line 3: Setting variable '${common.1269_appLabel}' failed: Resolving variable '${value.checkPremium}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:00.951" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_details_page.robot' on line 16: Setting variable '${partner_request_premium_list_details_page.special_campaign_dropdown}' failed: Resolving variable '${partner_reply_warranty_input.special_campaign}' failed: Variable '${partner_reply_warranty_input}' not found.</msg>
+<msg timestamp="20231215 17:16:01.072" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 19: Setting variable '${partner_request_premium_list_main_page.day_range_date_button}' failed: Resolving variable '${partner_input_list.start_day_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20231215 17:16:01.161" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 18: Setting variable '${partner_request_premium_list_main_page.end_range_date_button}' failed: Resolving variable '${partner_input_list.end_day_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20231215 17:16:01.267" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 17: Setting variable '${partner_request_premium_list_main_page.month_range_date_button}' failed: Resolving variable '${partner_input_list.month_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20231215 17:16:01.403" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 16: Setting variable '${partner_request_premium_list_main_page.year_range_date_button}' failed: Resolving variable '${partner_input_list.year_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20231215 17:16:01.508" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 24: Setting variable '${quotation_history_main_page.day_created_date_button}' failed: Resolving variable '${input_quotation.day_created_date}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20231215 17:16:01.616" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 23: Setting variable '${quotation_history_main_page.month_created_date_button}' failed: Resolving variable '${input_quotation.month_created_date}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20231215 17:16:01.725" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 27: Setting variable '${quotation_history_main_page.sale_channel_dropdown}' failed: Resolving variable '${input_quotation.sale_channel}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20231215 17:16:01.804" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 22: Setting variable '${quotation_history_main_page.year_created_date_button}' failed: Resolving variable '${input_quotation.year_created_date}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20231215 17:16:01.880" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 35: Setting variable '${request_premium_form_fill_page.brand_dropdown}' failed: Resolving variable '${input_form.brand_name}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:01.990" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 65: Setting variable '${request_premium_form_fill_page.car_color_dropdown}' failed: Resolving variable '${input_form.car_color}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.084" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 51: Setting variable '${request_premium_form_fill_page.car_power_dropdown}' failed: Resolving variable '${input_form.car_power}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.174" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 47: Setting variable '${request_premium_form_fill_page.car_type_dropdown}' failed: Resolving variable '${input_form.car_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.289" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 31: Setting variable '${request_premium_form_fill_page.car_year_dropdown}' failed: Resolving variable '${input_form.car_year}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.380" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 103: Setting variable '${request_premium_form_fill_page.check_premium_type_radioButton}' failed: Resolving variable '${input_form.check_premium_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.504" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 86: Setting variable '${request_premium_form_fill_page.day_campaign_effective_date_button}' failed: Resolving variable '${input_form.day_campaign_effective_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.629" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 91: Setting variable '${request_premium_form_fill_page.day_campaign_expire_date_button}' failed: Resolving variable '${input_form.day_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.753" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 114: Setting variable '${request_premium_form_fill_page.day_driver1_birthday_button}' failed: Resolving variable '${input_form.day_driver1_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.831" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 117: Setting variable '${request_premium_form_fill_page.day_driver2_birthday_button}' failed: Resolving variable '${input_form.day_driver2_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:02.922" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 81: Setting variable '${request_premium_form_fill_page.day_old_campaign_expire_date_button}' failed: Resolving variable '${input_form.day_old_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.038" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 122: Setting variable '${request_premium_form_fill_page.discount_percent_selection_box}' failed: Resolving variable '${input_form.discount_percent}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.142" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 39: Setting variable '${request_premium_form_fill_page.main_model_dropdown}' failed: Resolving variable '${input_form.main_model}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.245" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 85: Setting variable '${request_premium_form_fill_page.month_campaign_effective_date_button}' failed: Resolving variable '${input_form.month_campaign_effective_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.354" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 90: Setting variable '${request_premium_form_fill_page.month_campaign_expire_date_button}' failed: Resolving variable '${input_form.month_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.483" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 113: Setting variable '${request_premium_form_fill_page.month_driver1_birthday_button}' failed: Resolving variable '${input_form.month_driver1_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.593" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 116: Setting variable '${request_premium_form_fill_page.month_driver2_birthday_button}' failed: Resolving variable '${input_form.month_driver2_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.682" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 80: Setting variable '${request_premium_form_fill_page.month_old_campaign_expire_date_button}' failed: Resolving variable '${input_form.month_old_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.806" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 75: Setting variable '${request_premium_form_fill_page.old_insure_company_dropdown}' failed: Resolving variable '${input_form.old_insure_company}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:03.908" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 94: Setting variable '${request_premium_form_fill_page.premium_type_dropdown}' failed: Resolving variable '${input_form.premium_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.014" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 130: Setting variable '${request_premium_form_fill_page.question_set_for_new_customer_or_new_dropdown}' failed: Resolving variable '${input_form.question_set_for_new_customer_or_new}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.106" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 135: Setting variable '${request_premium_form_fill_page.question_set_for_renew_dropdown}' failed: Resolving variable '${input_form.question_set_for_renew}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.194" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 100: Setting variable '${request_premium_form_fill_page.repair_type_dropdown}' failed: Resolving variable '${input_form.repair_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.288" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 68: Setting variable '${request_premium_form_fill_page.sale_channel_dropdown}' failed: Resolving variable '${input_form.sale_channel}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.367" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 60: Setting variable '${request_premium_form_fill_page.special_equipment_radioButton}' failed: Resolving variable '${input_form.special_equipment}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.499" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 43: Setting variable '${request_premium_form_fill_page.sub_brand_dropdown}' failed: Resolving variable '${input_form.sub_brand}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.581" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 84: Setting variable '${request_premium_form_fill_page.year_campaign_effective_date_button}' failed: Resolving variable '${input_form.year_campaign_effective_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.708" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 89: Setting variable '${request_premium_form_fill_page.year_campaign_expire_date_button}' failed: Resolving variable '${input_form.year_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.841" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 112: Setting variable '${request_premium_form_fill_page.year_driver1_birthday_button}' failed: Resolving variable '${input_form.year_driver1_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:04.917" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 115: Setting variable '${request_premium_form_fill_page.year_driver2_birthday_button}' failed: Resolving variable '${input_form.year_driver2_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:05.024" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 79: Setting variable '${request_premium_form_fill_page.year_old_campaign_expire_date_button}' failed: Resolving variable '${input_form.year_old_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:05.131" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 4: Setting variable '${value_premium_form_main.ExistingCustomer}' failed: Resolving variable '${input_form.App_code}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:05.167" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 22: Setting variable '${request_premium_form_main_page.appCode_account_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20231215 17:16:05.281" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 15: Setting variable '${request_premium_form_main_page.appCode_list}' failed: Resolving variable '${input_form.App_code}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20231215 17:16:05.377" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 23: Setting variable '${request_premium_form_main_page.car_details_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20231215 17:16:05.480" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 21: Setting variable '${request_premium_form_main_page.customer_name_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20231215 17:16:05.594" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 20: Setting variable '${request_premium_form_main_page.existingCustomer_record}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20231215 17:16:05.695" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 24: Setting variable '${request_premium_form_main_page.license_no_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20231215 17:16:05.803" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 25: Setting variable '${request_premium_form_main_page.motor_expiry_date_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20231215 17:16:05.897" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 36: Setting variable '${search_premium_filter_campaign_page.brand_dropdown}' failed: Resolving variable '${value.brand_name}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:05.971" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 102: Setting variable '${search_premium_filter_campaign_page.car_color_dropdown}' failed: Resolving variable '${value.car_color}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.088" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 52: Setting variable '${search_premium_filter_campaign_page.car_power_dropdown}' failed: Resolving variable '${value.car_power}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.183" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 56: Setting variable '${search_premium_filter_campaign_page.car_type_dropdown}' failed: Resolving variable '${value.car_type}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.268" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 48: Setting variable '${search_premium_filter_campaign_page.car_year_dropdown}' failed: Resolving variable '${value.car_year}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.355" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 112: Setting variable '${search_premium_filter_campaign_page.day_driver1_birthday_button}' failed: Resolving variable '${value.day_driver1_birthday}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.476" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 115: Setting variable '${search_premium_filter_campaign_page.day_driver2_birthday_button}' failed: Resolving variable '${value.day_driver2_birthday}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.565" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 120: Setting variable '${search_premium_filter_campaign_page.day_start_campaign_effective_date_button}' failed: Resolving variable '${value.day_start_campaign_effective_date}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.672" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 99: Setting variable '${search_premium_filter_campaign_page.discount_percent_selection_box}' failed: Resolving variable '${value.discount_percent}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.761" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 74: Setting variable '${search_premium_filter_campaign_page.gross_code_dropdown}' failed: Resolving variable '${value.gross_code}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.877" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 40: Setting variable '${search_premium_filter_campaign_page.main_model_dropdown}' failed: Resolving variable '${value.main_model}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:06.963" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 111: Setting variable '${search_premium_filter_campaign_page.month_driver1_birthday_button}' failed: Resolving variable '${value.month_driver1_birthday}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.092" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 114: Setting variable '${search_premium_filter_campaign_page.month_driver2_birthday_button}' failed: Resolving variable '${value.month_driver2_birthday}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.178" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 119: Setting variable '${search_premium_filter_campaign_page.month_start_campaign_effective_date_button}' failed: Resolving variable '${value.month_start_campaign_effective_date}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.288" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 69: Setting variable '${search_premium_filter_campaign_page.repairType_radioButton}' failed: Resolving variable '${value.repair_type}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.392" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 60: Setting variable '${search_premium_filter_campaign_page.special_campaign_dropdown}' failed: Resolving variable '${value.special_campaign}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.490" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 64: Setting variable '${search_premium_filter_campaign_page.special_equipment_radioButton}' failed: Resolving variable '${value.special_equipment}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.614" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 44: Setting variable '${search_premium_filter_campaign_page.sub_brand_dropdown}' failed: Resolving variable '${value.sub_brand}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.711" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 110: Setting variable '${search_premium_filter_campaign_page.year_driver1_birthday_button}' failed: Resolving variable '${value.year_driver1_birthday}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.793" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 113: Setting variable '${search_premium_filter_campaign_page.year_driver2_birthday_button}' failed: Resolving variable '${value.year_driver2_birthday}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.904" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_filter_campaign_page.robot' on line 118: Setting variable '${search_premium_filter_campaign_page.year_start_campaign_effective_date_button}' failed: Resolving variable '${value.year_start_campaign_effective_date}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20231215 17:16:07.986" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_main_page.robot' on line 27: Setting variable '${search_premium_main_page.appCode_account_value_from_table}' failed: Resolving variable '${value_premium_main.App_code}' failed: Variable '${value_premium_main}' not found.</msg>
+<msg timestamp="20231215 17:16:08.099" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_main_page.robot' on line 20: Setting variable '${search_premium_main_page.appCode_list}' failed: Resolving variable '${value_premium_main.App_code}' failed: Variable '${value_premium_main}' not found.</msg>
+<msg timestamp="20231215 17:16:08.167" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_main_page.robot' on line 26: Setting variable '${search_premium_main_page.customer_name_value_from_table}' failed: Resolving variable '${value_premium_main.App_code}' failed: Variable '${value_premium_main}' not found.</msg>
+<msg timestamp="20231215 17:16:08.242" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_main_page.robot' on line 7: Setting variable '${value_premium_main.ExistingCustomer}' failed: Resolving variable '${value_premium_main.App_code}' failed: Variable '${value_premium_main}' not found.</msg>
+<msg timestamp="20231215 17:16:08.303" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\search_premium_tab\search_premium_main_page.robot' on line 25: Setting variable '${search_premium_main_page.existingCustomer_record}' failed: Resolving variable '${value_premium_main.ExistingCustomer}' failed: Variable '${value_premium_main}' not found.</msg>
+<msg timestamp="20231215 17:16:11.125" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python37\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.71); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

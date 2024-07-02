@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.7.9 on win32)" generated="20231217 20:52:19.411" rpa="false" schemaversion="4">
+<suite id="s1" name="Newsale" source="\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\testcase\newsale\newsale.robot">
+<test id="s1-t1" name="click Element" line="33">
+<kw name="Access to &quot;okta Beta&quot; login" library="common" type="SETUP">
+<arg>${value.state2_username}</arg>
+<arg>${value.state2_password}</arg>
+<arg>${value.state2_url}</arg>
+<arg>${xpath.state2_username_inputField}</arg>
+<arg>${xpath.state2_password_inputField}</arg>
+<arg>${xpath.state2_submitutton}</arg>
+<arg>${value.checkISP}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${value.state2_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231217 20:52:20.299" level="INFO">Opening browser 'Chrome' to base url 'https://beta-tisco.okta.com/login/login.htm'.</msg>
+<status status="PASS" starttime="20231217 20:52:20.295" endtime="20231217 20:52:28.438"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231217 20:52:28.438" endtime="20231217 20:52:28.607"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231217 20:52:38.609" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231217 20:52:28.608" endtime="20231217 20:52:38.609"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.state2_username_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:52:38.609" endtime="20231217 20:52:38.660"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.state2_username_inputField}</arg>
+<arg>${value.state2_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:52:38.662" level="INFO">Typing text 'puangkae' into text field 'xpath=//input[@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20231217 20:52:38.660" endtime="20231217 20:52:38.817"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.state2_password_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:52:38.818" endtime="20231217 20:52:38.858"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.state2_password_inputField}</arg>
+<arg>${value.state2_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:52:38.860" level="INFO">Typing text 'Aum711467345' into text field 'xpath=//input[@autocomplete="current-password"]'.</msg>
+<status status="PASS" starttime="20231217 20:52:38.859" endtime="20231217 20:52:39.058"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath.state2_submitutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:52:39.060" level="INFO">Clicking element 'xpath=//input[@id="okta-signin-submit"]'.</msg>
+<status status="PASS" starttime="20231217 20:52:39.059" endtime="20231217 20:52:39.172"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231217 20:52:49.173" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231217 20:52:39.172" endtime="20231217 20:52:49.173"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.state2_search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:52:49.174" endtime="20231217 20:52:49.218"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.state2_search}</arg>
+<arg>${value.checkISP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:52:49.219" level="INFO">Typing text '1269-Insurance Sale Portal-Beta_State2' into text field 'xpath=//input[@data-se="search-input"]'.</msg>
+<status status="PASS" starttime="20231217 20:52:49.218" endtime="20231217 20:52:49.647"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.state2_1269}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:52:49.647" endtime="20231217 20:52:49.690"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath.state2_1269}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:52:49.691" level="INFO">Clicking element 'xpath=//span[contains(text(),'1269-Insurance Sale Portal-Beta_State2')]'.</msg>
+<status status="PASS" starttime="20231217 20:52:49.690" endtime="20231217 20:52:49.828"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231217 20:52:54.830" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231217 20:52:49.828" endtime="20231217 20:52:54.830"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${value.isp_title}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231217 20:52:54.830" endtime="20231217 20:52:55.057"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>13s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231217 20:53:08.059" level="INFO">Slept 13 seconds</msg>
+<status status="PASS" starttime="20231217 20:52:55.058" endtime="20231217 20:53:08.059"/>
+</kw>
+<kw name="Verify App License expired dialog are display or not" library="common">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Result_app_license_expired_dialog}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20231217 20:53:08.063" level="INFO">Length is 71</msg>
+<status status="PASS" starttime="20231217 20:53:08.062" endtime="20231217 20:53:08.063"/>
+</kw>
+<msg timestamp="20231217 20:53:08.063" level="INFO">${Result_app_license_expired_dialog} = True</msg>
+<status status="PASS" starttime="20231217 20:53:08.061" endtime="20231217 20:53:08.063"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_app_license_expired_dialog}' == 'True'">
+<kw name="Click confirm app license expired dialog button" library="common">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:08.065" endtime="20231217 20:53:08.113"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:08.114" level="INFO">Clicking element 'xpath=//app-license-expired-dialog/..//span[contains(text(),'รับทราบ')]'.</msg>
+<status status="PASS" starttime="20231217 20:53:08.113" endtime="20231217 20:53:08.208"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath.telesale_searchcustomer_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:08.209" level="INFO">Clicking element 'xpath=//span[contains(text(),'ค้นหาข้อมูลลูกค้า')]'.</msg>
+<status status="PASS" starttime="20231217 20:53:08.208" endtime="20231217 20:53:08.340"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231217 20:53:13.344" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231217 20:53:08.342" endtime="20231217 20:53:13.344"/>
+</kw>
+<status status="PASS" starttime="20231217 20:53:08.065" endtime="20231217 20:53:13.344"/>
+</kw>
+<status status="PASS" starttime="20231217 20:53:08.064" endtime="20231217 20:53:13.344"/>
+</branch>
+<status status="PASS" starttime="20231217 20:53:08.063" endtime="20231217 20:53:13.344"/>
+</if>
+<status status="PASS" starttime="20231217 20:53:08.059" endtime="20231217 20:53:13.344"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value_common.email}</arg>
+<arg>${value.state2_username}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231217 20:53:13.349" level="INFO">${value_common.email} = puangkae</msg>
+<status status="PASS" starttime="20231217 20:53:13.345" endtime="20231217 20:53:13.349"/>
+</kw>
+<status status="PASS" starttime="20231217 20:52:20.288" endtime="20231217 20:53:13.349"/>
+</kw>
+<kw name="Varidate search button before input data" library="feature">
+<kw name="Validate keyword on Page" library="Search_customer_data_page">
+<for flavor="IN">
+<var>${text_ISP}</var>
+<value>@{text_to_check_ISP}</value>
+<iter>
+<var name="${text_ISP}"/>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${text_exits_ISP}</var>
+<arg>Should Contain</arg>
+<arg>${BODY TEXT}</arg>
+<arg>${text_ISP}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231217 20:53:13.352" endtime="20231217 20:53:13.353"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>not ${text_exits_ISP}</arg>
+<arg>Fail</arg>
+<arg>Expected text '${text_ISP}' not found on the Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231217 20:53:13.353" endtime="20231217 20:53:13.353"/>
+</kw>
+<status status="NOT RUN" starttime="20231217 20:53:13.352" endtime="20231217 20:53:13.353"/>
+</iter>
+<status status="NOT RUN" starttime="20231217 20:53:13.352" endtime="20231217 20:53:13.353"/>
+</for>
+<status status="PASS" starttime="20231217 20:53:13.351" endtime="20231217 20:53:13.353"/>
+</kw>
+<kw name="Varidate search button before input data" library="Search_customer_data_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:13.356" level="INFO">Clicking element 'xpath=//button[@class="tsc-btn tsc-btn__info"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:13.354" endtime="20231217 20:53:13.509"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_nodata_search_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:13.510" endtime="20231217 20:53:13.570"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ok_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:13.572" level="INFO">Clicking element 'xpath=//span[@class="mdc-button__label"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:13.571" endtime="20231217 20:53:13.679"/>
+</kw>
+<status status="PASS" starttime="20231217 20:53:13.354" endtime="20231217 20:53:13.679"/>
+</kw>
+<kw name="Fill in เลขที่สัญญา test" library="Search_customer_data_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_เลขที่สัญญา}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:13.680" endtime="20231217 20:53:13.738"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_เลขที่สัญญา}</arg>
+<arg>aaASDFฟหกด!@#$11111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:13.740" level="INFO">Typing text 'aaASDFฟหกด!@#$11111' into text field 'xpath=//input[@id="txtAccNum"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:13.739" endtime="20231217 20:53:14.012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_Appno.}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:14.012" endtime="20231217 20:53:14.053"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_Appno.}</arg>
+<arg>aaASDFฟหกด!@#$11111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:14.055" level="INFO">Typing text 'aaASDFฟหกด!@#$11111' into text field 'xpath=//input[@id="txtAppNo"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:14.054" endtime="20231217 20:53:14.268"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_ชื่อ-นามสกุลลูกค้า}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:14.268" endtime="20231217 20:53:14.316"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_ชื่อ-นามสกุลลูกค้า}</arg>
+<arg>aaASDFฟหกด!@#$11111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:14.318" level="INFO">Typing text 'aaASDFฟหกด!@#$11111' into text field 'xpath=//input[@id="txtClientName"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:14.317" endtime="20231217 20:53:14.541"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_ชื่อ-นามสกุลลูกค้า}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:14.541" endtime="20231217 20:53:14.573"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_ชื่อ-นามสกุลลูกค้า}</arg>
+<arg>aaASDFฟหกด!@#$11111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:14.575" level="INFO">Typing text 'aaASDFฟหกด!@#$11111' into text field 'xpath=//input[@id="txtClientName"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:14.574" endtime="20231217 20:53:14.763"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_เลขทะเบียนรถ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:14.763" endtime="20231217 20:53:14.802"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_เลขทะเบียนรถ}</arg>
+<arg>aaASDFฟหกด!@#$11111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:14.804" level="INFO">Typing text 'aaASDFฟหกด!@#$11111' into text field 'xpath=//input[@id="txtLicense"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:14.803" endtime="20231217 20:53:15.027"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_หมายเลขตัวถัง}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:15.027" endtime="20231217 20:53:15.072"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_หมายเลขตัวถัง}</arg>
+<arg>aaASDFฟหกด!@#$11111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:15.073" level="INFO">Typing text 'aaASDFฟหกด!@#$11111' into text field 'xpath=//input[@id="txtChassis"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:15.072" endtime="20231217 20:53:15.279"/>
+</kw>
+<status status="PASS" starttime="20231217 20:53:13.679" endtime="20231217 20:53:15.279"/>
+</kw>
+<kw name="Click Clear Data button" library="Search_customer_data_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${clear_data_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:15.280" endtime="20231217 20:53:15.318"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clear_data_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:15.319" level="INFO">Clicking element 'xpath=//button[@class="tsc-btn tsc-btn__danger__outline mx-2"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:15.318" endtime="20231217 20:53:15.391"/>
+</kw>
+<status status="PASS" starttime="20231217 20:53:15.279" endtime="20231217 20:53:15.391"/>
+</kw>
+<kw name="Fill in เลขที่สัญญา" library="Search_customer_data_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${textbox_เลขที่สัญญา}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:15.392" endtime="20231217 20:53:15.423"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_เลขที่สัญญา}</arg>
+<arg>943223</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:15.424" level="INFO">Typing text '943223' into text field 'xpath=//input[@id="txtAccNum"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:15.423" endtime="20231217 20:53:15.574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231217 20:53:15.574" endtime="20231217 20:53:15.605"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textbox_เลขที่สัญญา}</arg>
+<arg>943223</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:15.607" level="INFO">Typing text '943223' into text field 'xpath=//input[@id="txtAccNum"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:15.606" endtime="20231217 20:53:15.767"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231217 20:53:15.768" level="INFO">Clicking element 'xpath=//button[@class="tsc-btn tsc-btn__info"]'.</msg>
+<status status="PASS" starttime="20231217 20:53:15.767" endtime="20231217 20:53:15.853"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231217 20:53:25.854" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231217 20:53:15.853" endtime="20231217 20:53:25.854"/>
+</kw>
+<status status="PASS" starttime="20231217 20:53:15.392" endtime="20231217 20:53:25.854"/>
+</kw>
+<kw name="check keyword letter page" library="Letter_customer_data_page">
+<for flavor="IN">
+<var>${text}</var>
+<value>@{texts_to_check}</value>
+<iter>
+<var name="${text}"/>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${text_exits}</var>
+<arg>Should Contain</arg>
+<arg>${BODY TEXT}</arg>
+<arg>${text}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231217 20:53:25.856" endtime="20231217 20:53:25.856"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>not ${text_exits}</arg>
+<arg>Fail</arg>
+<arg>Expected text '${text}' not found on the Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231217 20:53:25.856" endtime="20231217 20:53:25.857"/>
+</kw>
+<status status="NOT RUN" starttime="20231217 20:53:25.856" endtime="20231217 20:53:25.857"/>
+</iter>
+<status status="NOT RUN" starttime="20231217 20:53:25.855" endtime="20231217 20:53:25.857"/>
+</for>
+<status status="PASS" starttime="20231217 20:53:25.855" endtime="20231217 20:53:25.857"/>
+</kw>
+<kw name="check div text Status" library="Letter_customer_data_page">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<arg>${1}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20231217 20:53:25.858" level="FAIL">Keyword 'SeleniumLibrary.Get Element Attribute' expected 2 arguments, got 1.</msg>
+<status status="FAIL" starttime="20231217 20:53:25.858" endtime="20231217 20:53:25.858"/>
+</kw>
+<status status="FAIL" starttime="20231217 20:53:25.857" endtime="20231217 20:53:25.858"/>
+</kw>
+<kw name="check keyword claim history page" library="Letter_customer_data_page">
+<status status="NOT RUN" starttime="20231217 20:53:25.859" endtime="20231217 20:53:25.859"/>
+</kw>
+<status status="FAIL" starttime="20231217 20:53:13.350" endtime="20231217 20:53:25.859"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231217 20:53:25.860" endtime="20231217 20:53:33.683"/>
+</kw>
+<status status="FAIL" starttime="20231217 20:52:20.280" endtime="20231217 20:53:33.684">Keyword 'SeleniumLibrary.Get Element Attribute' expected 2 arguments, got 1.</status>
+</test>
+<status status="FAIL" starttime="20231217 20:52:19.420" endtime="20231217 20:53:33.687"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Newsale">Newsale</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231217 20:52:20.195" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Search_customer_data_page.robot' on line 7: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.197" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Search_customer_data_page.robot' on line 8: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.198" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Search_customer_data_page.robot' on line 9: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.226" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 3: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.230" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 4: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.234" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 5: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.237" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 6: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.240" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 7: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.244" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 8: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.248" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 9: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.251" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 10: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.253" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 12: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.254" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 13: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.255" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 14: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.256" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 15: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20231217 20:52:20.259" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\New folder\Renew\keyword\tab\Letter_customer_data_page.robot' on line 16: Setting variable '' failed: Invalid variable name ''.</msg>
+</errors>
+</robot>

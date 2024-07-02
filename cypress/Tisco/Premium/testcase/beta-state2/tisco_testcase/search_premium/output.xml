@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.7.9 on win32)" generated="20240119 10:15:27.110" rpa="false" schemaversion="4">
+<suite id="s1" name="Execute Search Premium" source="\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\testcase\beta-state2\tisco_testcase\search_premium\execute_search_premium.robot">
+<test id="s1-t1" name="SearchPremium_PremiumInformation(ลูกค้าทิสโก้) - ค้นหาเบี้ยประกันแบบปกติ โดย search field ทั้งหมด/เลือกเอง และ บันทึกประวัติเช็คเบี้ย ได้ถูกต้อง" line="71">
+<kw name="Access to Check Premium application (Okta Alpha/Beta)" library="common" type="SETUP">
+<arg>${value.email}</arg>
+<arg>${value.password}</arg>
+<arg>${value.okta_url}</arg>
+<arg>${xpath.email_inputField}</arg>
+<arg>${xpath.password_inputField}</arg>
+<arg>${xpath.signIn_button}</arg>
+<arg>${value.checkPremium}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${value.okta_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240119 10:15:36.407" level="INFO">Opening browser 'Chrome' to base url 'https://beta-tisco.okta.com/'.</msg>
+<msg timestamp="20240119 10:15:39.384" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python37\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.71); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20240119 10:15:36.406" endtime="20240119 10:15:47.912"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240119 10:15:47.913" endtime="20240119 10:15:48.164"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:15:58.166" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240119 10:15:48.165" endtime="20240119 10:15:58.166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.email_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:15:58.166" endtime="20240119 10:15:58.219"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.email_inputField}</arg>
+<arg>${value.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:15:58.221" level="INFO">Typing text 'zatiwit@tisco.co.th' into text field 'xpath=//input[@id="okta-signin-username"]'.</msg>
+<status status="PASS" starttime="20240119 10:15:58.220" endtime="20240119 10:15:58.398"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.password_inputField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:15:58.398" endtime="20240119 10:15:58.442"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.password_inputField}</arg>
+<arg>${value.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:15:58.444" level="INFO">Typing text 'Dream171298*' into text field 'xpath=//input[@id="okta-signin-password"]'.</msg>
+<status status="PASS" starttime="20240119 10:15:58.443" endtime="20240119 10:15:58.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath.signIn_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:15:58.639" level="INFO">Clicking element 'xpath=//input[@id="okta-signin-submit"]'.</msg>
+<status status="PASS" starttime="20240119 10:15:58.638" endtime="20240119 10:15:58.751"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>16s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:14.754" level="INFO">Slept 16 seconds</msg>
+<status status="PASS" starttime="20240119 10:15:58.752" endtime="20240119 10:16:14.754"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.search_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:14.755" endtime="20240119 10:16:14.809"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${common.search_textField}</arg>
+<arg>${value.checkPremium}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:14.811" level="INFO">Typing text '(RDBMS) 1269-Insurance Quotation System-Beta_State2' into text field 'xpath=//input[@name="search"]'.</msg>
+<status status="PASS" starttime="20240119 10:16:14.810" endtime="20240119 10:16:15.236"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.1269_appLabel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:15.236" endtime="20240119 10:16:15.308"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.1269_appLabel}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:15.310" level="INFO">Clicking element 'xpath=//span[contains(text(),'(RDBMS) 1269-Insurance Quotation System-Beta_State2')]'.</msg>
+<status status="PASS" starttime="20240119 10:16:15.309" endtime="20240119 10:16:15.466"/>
+</kw>
+<kw name="Wait for process 2s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:17.470" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:15.467" endtime="20240119 10:16:17.470"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:15.466" endtime="20240119 10:16:17.470"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${value.premium_title}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240119 10:16:17.471" endtime="20240119 10:16:18.670"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>13s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:31.673" level="INFO">Slept 13 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:18.671" endtime="20240119 10:16:31.673"/>
+</kw>
+<kw name="Verify App License expired dialog are display or not" library="common">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Result_app_license_expired_dialog}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20240119 10:16:31.677" level="INFO">Length is 71</msg>
+<status status="PASS" starttime="20240119 10:16:31.677" endtime="20240119 10:16:31.677"/>
+</kw>
+<msg timestamp="20240119 10:16:31.677" level="INFO">${Result_app_license_expired_dialog} = True</msg>
+<status status="PASS" starttime="20240119 10:16:31.675" endtime="20240119 10:16:31.678"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_app_license_expired_dialog}' == 'True'">
+<kw name="Click confirm app license expired dialog button" library="common">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:31.679" endtime="20240119 10:16:31.742"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.confirm_app_license_expired_dialog_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:31.746" level="INFO">Clicking element 'xpath=//app-license-expired-dialog/..//span[contains(text(),'รับทราบ')]'.</msg>
+<status status="PASS" starttime="20240119 10:16:31.742" endtime="20240119 10:16:31.895"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:31.679" endtime="20240119 10:16:31.895"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:31.678" endtime="20240119 10:16:31.895"/>
+</branch>
+<status status="PASS" starttime="20240119 10:16:31.678" endtime="20240119 10:16:31.895"/>
+</if>
+<status status="PASS" starttime="20240119 10:16:31.674" endtime="20240119 10:16:31.896"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value_common.email}</arg>
+<arg>${value.email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:16:31.928" level="INFO">${value_common.email} = zatiwit@tisco.co.th</msg>
+<status status="PASS" starttime="20240119 10:16:31.896" endtime="20240119 10:16:31.928"/>
+</kw>
+<status status="PASS" starttime="20240119 10:15:36.397" endtime="20240119 10:16:31.929"/>
+</kw>
+<kw name="(Tisco customer) Normal search Premium information all field/custom and saving history correctly" library="search_premium_feature">
+<arg>${value_premium_main.App_code}</arg>
+<arg>${value_premium_main.Account}</arg>
+<arg>${value.special_campaign}</arg>
+<arg>${value.special_equipment}</arg>
+<arg>${value.coverage_amount_od}</arg>
+<arg>${value.repair_type}</arg>
+<arg>${value.gross_code}</arg>
+<arg>@{value.insurance_type}</arg>
+<kw name="Select desired Tisco customer" library="search_premium_feature">
+<arg>${value_premium_main.App_code}</arg>
+<arg>${value_premium_main.Account}</arg>
+<kw name="(Tisco customer) Search Existing Customer by App code/Account" library="search_premium_feature">
+<arg>${value_premium_main.App_code}</arg>
+<arg>${value_premium_main.Account}</arg>
+<kw name="Access search premium tab (Existing cus) &amp; input App code/Account" library="search_premium_feature">
+<arg>${value_premium_main.App_code}</arg>
+<arg>${value_premium_main.Account}</arg>
+<kw name="Click search premium tab" library="common">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.check_premium_information_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:31.936" endtime="20240119 10:16:32.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.check_premium_information_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:32.061" level="INFO">Clicking element 'xpath=//span[contains(text(),'เช็คข้อมูลเบี้ยประกันรถยนต์')]'.</msg>
+<status status="PASS" starttime="20240119 10:16:32.059" endtime="20240119 10:16:32.159"/>
+</kw>
+<kw name="Wait for process 2s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:34.162" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:32.161" endtime="20240119 10:16:34.162"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:32.160" endtime="20240119 10:16:34.162"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.check_premium_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:34.163" endtime="20240119 10:16:34.209"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.check_premium_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:34.211" level="INFO">Clicking element 'xpath=//div[@class="sidebar show-menu"]/div[@class="item-menu show-menu"]/..//div[@class="sub-menu"]/*[1]/div/a/mat-icon/../span[contains(text(),'ค้นหาเบี้ยในระบบ')]/..'.</msg>
+<status status="PASS" starttime="20240119 10:16:34.209" endtime="20240119 10:16:34.310"/>
+</kw>
+<kw name="Wait for process 2s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:36.312" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:34.311" endtime="20240119 10:16:36.312"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:34.310" endtime="20240119 10:16:36.312"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${common.search_premium_tab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:36.314" endtime="20240119 10:16:36.364"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${common.search_premium_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:36.365" level="INFO">Clicking element 'xpath=//div[@class="sidebar show-menu"]/div[@class="item-menu show-menu"]/..//div[@class="sub-menu"]/*[1]/div/div/*//span[text()='ค้นหาเบี้ยประกันภัยรถยนต์']'.</msg>
+<status status="PASS" starttime="20240119 10:16:36.364" endtime="20240119 10:16:36.470"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:41.473" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:36.471" endtime="20240119 10:16:41.473"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:31.935" endtime="20240119 10:16:41.474"/>
+</kw>
+<kw name="Select Existing Customer" library="search_premium_main_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.tiscoCustomer_radioButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:41.476" endtime="20240119 10:16:41.532"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_main_page.tiscoCustomer_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:41.533" level="INFO">Clicking element 'xpath=//label[text() = 'ลูกค้าทิสโก้']'.</msg>
+<status status="PASS" starttime="20240119 10:16:41.532" endtime="20240119 10:16:41.665"/>
+</kw>
+<kw name="Check Search premium description label" library="search_premium_main_page">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.tisco_customer_description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:16:41.667" endtime="20240119 10:16:41.714"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:41.666" endtime="20240119 10:16:41.714"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:41.474" endtime="20240119 10:16:41.714"/>
+</kw>
+<kw name="Select App code" library="search_premium_main_page">
+<arg>${value_premium_main.App_code}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.appCode_dropdown}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:41.716" endtime="20240119 10:16:41.763"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_main_page.appCode_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:41.764" level="INFO">Clicking element 'xpath=//mat-select[@aria-haspopup="listbox"]'.</msg>
+<status status="PASS" starttime="20240119 10:16:41.763" endtime="20240119 10:16:41.901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.appCode_list}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:41.902" endtime="20240119 10:16:41.960"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_main_page.appCode_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:41.962" level="INFO">Clicking element 'xpath=//span[contains(text(),'HP')]'.</msg>
+<status status="PASS" starttime="20240119 10:16:41.960" endtime="20240119 10:16:42.120"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:41.715" endtime="20240119 10:16:42.120"/>
+</kw>
+<kw name="Fill Account" library="search_premium_main_page">
+<arg>${value_premium_main.Account}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.account_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:42.123" endtime="20240119 10:16:42.173"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search_premium_main_page.account_textField}</arg>
+<arg>${value_premium_main.Account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:42.175" level="INFO">Typing text '2200289529' into text field 'xpath=//input[@formcontrolname="acc_no"]'.</msg>
+<status status="PASS" starttime="20240119 10:16:42.173" endtime="20240119 10:16:42.537"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:42.121" endtime="20240119 10:16:42.537"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:31.934" endtime="20240119 10:16:42.538"/>
+</kw>
+<kw name="Click search &amp; check found existing customer by App Code / Account" library="search_premium_feature">
+<kw name="Wait for process 3s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:45.543" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:42.541" endtime="20240119 10:16:45.543"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:42.540" endtime="20240119 10:16:45.543"/>
+</kw>
+<kw name="Click Search button" library="search_premium_main_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.search_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:16:45.545" endtime="20240119 10:16:45.596"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${search_premium_main_page.search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:45.597" level="INFO">Clicking button 'xpath=//button[@class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"]'.</msg>
+<status status="PASS" starttime="20240119 10:16:45.596" endtime="20240119 10:16:45.769"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:45.544" endtime="20240119 10:16:45.769"/>
+</kw>
+<kw name="Wait for process 10s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:16:55.772" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:45.771" endtime="20240119 10:16:55.772"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:45.770" endtime="20240119 10:16:55.772"/>
+</kw>
+<kw name="Check found existing customer by App Code / Account" library="search_premium_main_page">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Result}</var>
+<arg>SeleniumLibrary.Element Should Not Be Visible</arg>
+<arg>${search_premium_main_page.dataInfoEmpty}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.dataInfoEmpty}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20240119 10:16:55.796" level="INFO">Element 'xpath=//td[@class="dataTables_empty"]' did not exist.</msg>
+<status status="PASS" starttime="20240119 10:16:55.774" endtime="20240119 10:16:55.796"/>
+</kw>
+<msg timestamp="20240119 10:16:55.797" level="INFO">${Result} = True</msg>
+<status status="PASS" starttime="20240119 10:16:55.774" endtime="20240119 10:16:55.797"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${column_app_code_account_values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240119 10:16:55.798" level="INFO">${column_app_code_account_values} = []</msg>
+<status status="PASS" starttime="20240119 10:16:55.797" endtime="20240119 10:16:55.798"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result}' == 'True'">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${row_count}</var>
+<arg>xpath=//table[@id="searchCustomerTable"]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20240119 10:16:55.822" level="INFO">${row_count} = 1</msg>
+<status status="PASS" starttime="20240119 10:16:55.799" endtime="20240119 10:16:55.822"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${row_index}</var>
+<value>1</value>
+<value>${row_count}+1</value>
+<iter>
+<var name="${row_index}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${column_app_code_account_value}</var>
+<arg>xpath=//table[@id="searchCustomerTable"]/tbody/tr[${row_index}]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:16:55.883" level="INFO">${column_app_code_account_value} = HP 2200289529</msg>
+<status status="PASS" starttime="20240119 10:16:55.824" endtime="20240119 10:16:55.883"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${column_app_code_account_values}</arg>
+<arg>${column_app_code_account_value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240119 10:16:55.884" endtime="20240119 10:16:55.884"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:55.823" endtime="20240119 10:16:55.884"/>
+</iter>
+<status status="PASS" starttime="20240119 10:16:55.822" endtime="20240119 10:16:55.885"/>
+</for>
+<kw name="Log" library="BuiltIn">
+<arg>all existing customer values: ${column_app_code_account_values}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:16:55.885" level="INFO">all existing customer values: ['HP 2200289529']</msg>
+<status status="PASS" starttime="20240119 10:16:55.885" endtime="20240119 10:16:55.886"/>
+</kw>
+<for flavor="IN">
+<var>${app_code_account}</var>
+<value>@{column_app_code_account_values}</value>
+<iter>
+<var name="${app_code_account}">HP 2200289529</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Result}</var>
+<arg>Should Contain Any</arg>
+<arg>${app_code_account}</arg>
+<arg>${value_premium_main.ExistingCustomer}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Contain Any" library="BuiltIn">
+<arg>${app_code_account}</arg>
+<arg>${value_premium_main.ExistingCustomer}</arg>
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<status status="PASS" starttime="20240119 10:16:55.887" endtime="20240119 10:16:55.888"/>
+</kw>
+<msg timestamp="20240119 10:16:55.888" level="INFO">${Result} = True</msg>
+<status status="PASS" starttime="20240119 10:16:55.887" endtime="20240119 10:16:55.888"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result}' == 'True'">
+<kw name="Log" library="BuiltIn">
+<arg>${app_code_account} contain: ${value_premium_main.ExistingCustomer}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:16:55.889" level="INFO">HP 2200289529 contain: HP 2200289529</msg>
+<status status="PASS" starttime="20240119 10:16:55.889" endtime="20240119 10:16:55.889"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:55.888" endtime="20240119 10:16:55.889"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>${app_code_account}, ${value_premium_main.ExistingCustomer} มีข้อมูลไม่ตรงกัน</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20240119 10:16:55.892" endtime="20240119 10:16:55.892"/>
+</kw>
+<status status="NOT RUN" starttime="20240119 10:16:55.891" endtime="20240119 10:16:55.892"/>
+</branch>
+<status status="PASS" starttime="20240119 10:16:55.888" endtime="20240119 10:16:55.892"/>
+</if>
+<status status="PASS" starttime="20240119 10:16:55.886" endtime="20240119 10:16:55.892"/>
+</iter>
+<status status="PASS" starttime="20240119 10:16:55.886" endtime="20240119 10:16:55.892"/>
+</for>
+<status status="PASS" starttime="20240119 10:16:55.798" endtime="20240119 10:16:55.892"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>ไม่พบข้อมูลลูกค้าทิสโก้ โดย App Code / Account : ${value_premium_main.ExistingCustomer}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20240119 10:16:55.893" endtime="20240119 10:16:55.893"/>
+</kw>
+<status status="NOT RUN" starttime="20240119 10:16:55.892" endtime="20240119 10:16:55.893"/>
+</branch>
+<status status="PASS" starttime="20240119 10:16:55.798" endtime="20240119 10:16:55.893"/>
+</if>
+<status status="PASS" starttime="20240119 10:16:55.773" endtime="20240119 10:16:55.893"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:42.539" endtime="20240119 10:16:55.894"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:31.933" endtime="20240119 10:16:55.894"/>
+</kw>
+<kw name="Wait for process 5s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:17:00.895" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240119 10:16:55.895" endtime="20240119 10:17:00.895"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:55.894" endtime="20240119 10:17:00.895"/>
+</kw>
+<kw name="Get app code/account from searchCustomer Table" library="search_premium_main_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_appCode_account_value}</var>
+<arg>${search_premium_main_page.appCode_account_value_from_table}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:00.931" level="INFO">${get_appCode_account_value} = HP 2200289529</msg>
+<status status="PASS" starttime="20240119 10:17:00.896" endtime="20240119 10:17:00.931"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${appCode_account_value}</var>
+<arg>'${get_appCode_account_value}'.replace(' ','-')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240119 10:17:00.932" level="INFO">${appCode_account_value} = HP-2200289529</msg>
+<status status="PASS" starttime="20240119 10:17:00.931" endtime="20240119 10:17:00.932"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value_premium_main.appCode_account_value_from_searchCustomerTable}</arg>
+<arg>${appCode_account_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:00.965" level="INFO">${value_premium_main.appCode_account_value_from_searchCustomerTable} = HP-2200289529</msg>
+<status status="PASS" starttime="20240119 10:17:00.932" endtime="20240119 10:17:00.966"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:00.895" endtime="20240119 10:17:00.966"/>
+</kw>
+<kw name="Get customer name from searchCustomer Table" library="search_premium_main_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_customer_name_value}</var>
+<arg>${search_premium_main_page.customer_name_value_from_table}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:00.999" level="INFO">${get_customer_name_value} = น.ส.ชื่อ 7940685 นามสกุล 7940685</msg>
+<status status="PASS" starttime="20240119 10:17:00.967" endtime="20240119 10:17:00.999"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value_premium_main.customer_name_value_from_searchCustomerTable}</arg>
+<arg>${get_customer_name_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:01.033" level="INFO">${value_premium_main.customer_name_value_from_searchCustomerTable} = น.ส.ชื่อ 7940685 นามสกุล 7940685</msg>
+<status status="PASS" starttime="20240119 10:17:01.000" endtime="20240119 10:17:01.033"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:00.966" endtime="20240119 10:17:01.033"/>
+</kw>
+<kw name="Select desired Existing Customer" library="search_premium_main_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.existingCustomer_record}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:01.034" endtime="20240119 10:17:01.069"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_main_page.existingCustomer_record}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:01.070" level="INFO">Clicking element 'xpath=//td[contains(text(),'HP 2200289529')]'.</msg>
+<status status="PASS" starttime="20240119 10:17:01.069" endtime="20240119 10:17:01.376"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:01.033" endtime="20240119 10:17:01.377"/>
+</kw>
+<kw name="Wait for process 3s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:17:04.380" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240119 10:17:01.378" endtime="20240119 10:17:04.380"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:01.377" endtime="20240119 10:17:04.380"/>
+</kw>
+<status status="PASS" starttime="20240119 10:16:31.932" endtime="20240119 10:17:04.380"/>
+</kw>
+<kw name="Select Normal search field from &quot;Special campaign&quot; to &quot;Gross premium code&quot;" library="search_premium_feature">
+<arg>${value.special_campaign}</arg>
+<arg>${value.special_equipment}</arg>
+<arg>${value.coverage_amount_od}</arg>
+<arg>${value.repair_type}</arg>
+<arg>${value.gross_code}</arg>
+<arg>@{value.insurance_type}</arg>
+<kw name="Fill &amp; Select Special Campaign" library="search_premium_filter_campaign_page">
+<arg>${value.special_campaign}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_campaign_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:04.385" endtime="20240119 10:17:04.435"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_campaign_textField}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240119 10:17:04.436" endtime="20240119 10:17:04.508"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_campaign_textField}</arg>
+<arg>${value.special_campaign}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:04.511" level="INFO">Typing text 'FORD ENSURE' into text field 'xpath=//input[@formcontrolname="spcl_cmpn_mask"]'.</msg>
+<status status="PASS" starttime="20240119 10:17:04.509" endtime="20240119 10:17:04.879"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_campaign_dropdown}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:04.879" endtime="20240119 10:17:04.923"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_campaign_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:04.927" level="INFO">Clicking element 'xpath=//span[contains(text(),' FORD ENSURE ')]'.</msg>
+<status status="PASS" starttime="20240119 10:17:04.924" endtime="20240119 10:17:05.046"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:04.383" endtime="20240119 10:17:05.046"/>
+</kw>
+<kw name="Select Special equipment" library="search_premium_filter_campaign_page">
+<arg>${value.special_equipment}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.special_equipment_header}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:17:05.048" endtime="20240119 10:17:05.082"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_equipment_radioButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:05.083" endtime="20240119 10:17:05.127"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.special_equipment_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:05.129" level="INFO">Clicking element 'xpath=//mat-label[contains(text(),'อุปกรณ์พิเศษ')]/..//div[@class="mdc-form-field"]/..//label[text() = 'ไม่มี']'.</msg>
+<status status="PASS" starttime="20240119 10:17:05.128" endtime="20240119 10:17:05.229"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:05.047" endtime="20240119 10:17:05.229"/>
+</kw>
+<kw name="Select Insurance type" library="search_premium_filter_campaign_page">
+<arg>@{value.insurance_type}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.insurance_type_header}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:17:05.230" endtime="20240119 10:17:05.260"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Result_insure_type}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${value.insurance_type}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${value.insurance_type}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20240119 10:17:05.263" level="INFO">Length is 5</msg>
+<status status="PASS" starttime="20240119 10:17:05.262" endtime="20240119 10:17:05.263"/>
+</kw>
+<msg timestamp="20240119 10:17:05.263" level="INFO">${Result_insure_type} = True</msg>
+<status status="PASS" starttime="20240119 10:17:05.260" endtime="20240119 10:17:05.263"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_insure_type}' == 'True'">
+<for flavor="IN">
+<var>${insure_type_list}</var>
+<value>@{value.insurance_type}</value>
+<iter>
+<var name="${insure_type_list}">ประเภท 1</var>
+<if>
+<branch type="IF" condition="'${insure_type_list}' != 'ประเภท 1'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:05.265" endtime="20240119 10:17:05.265"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:05.266" endtime="20240119 10:17:05.266"/>
+</kw>
+<status status="NOT RUN" starttime="20240119 10:17:05.265" endtime="20240119 10:17:05.266"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:05.264" endtime="20240119 10:17:05.266"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:05.264" endtime="20240119 10:17:05.266"/>
+</iter>
+<iter>
+<var name="${insure_type_list}">ประเภท 2</var>
+<if>
+<branch type="IF" condition="'${insure_type_list}' != 'ประเภท 1'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:05.268" endtime="20240119 10:17:05.309"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:05.311" level="INFO">Clicking element 'xpath=//span[text()=' ประเภท 2']'.</msg>
+<status status="PASS" starttime="20240119 10:17:05.310" endtime="20240119 10:17:05.442"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:05.267" endtime="20240119 10:17:05.442"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:05.267" endtime="20240119 10:17:05.442"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:05.267" endtime="20240119 10:17:05.442"/>
+</iter>
+<iter>
+<var name="${insure_type_list}">ประเภท 3</var>
+<if>
+<branch type="IF" condition="'${insure_type_list}' != 'ประเภท 1'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:05.444" endtime="20240119 10:17:05.493"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:05.495" level="INFO">Clicking element 'xpath=//span[text()=' ประเภท 3']'.</msg>
+<status status="PASS" starttime="20240119 10:17:05.494" endtime="20240119 10:17:05.632"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:05.443" endtime="20240119 10:17:05.632"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:05.443" endtime="20240119 10:17:05.632"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:05.443" endtime="20240119 10:17:05.632"/>
+</iter>
+<iter>
+<var name="${insure_type_list}">ประเภท 3 พิเศษ</var>
+<if>
+<branch type="IF" condition="'${insure_type_list}' != 'ประเภท 1'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:05.634" endtime="20240119 10:17:05.709"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:05.710" level="INFO">Clicking element 'xpath=//span[text()=' ประเภท 3 พิเศษ']'.</msg>
+<status status="PASS" starttime="20240119 10:17:05.709" endtime="20240119 10:17:05.861"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:05.633" endtime="20240119 10:17:05.861"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:05.633" endtime="20240119 10:17:05.861"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:05.632" endtime="20240119 10:17:05.861"/>
+</iter>
+<iter>
+<var name="${insure_type_list}">ประเภท 2 พิเศษ</var>
+<if>
+<branch type="IF" condition="'${insure_type_list}' != 'ประเภท 1'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:05.863" endtime="20240119 10:17:05.912"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()=' ${insure_type_list}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:05.914" level="INFO">Clicking element 'xpath=//span[text()=' ประเภท 2 พิเศษ']'.</msg>
+<status status="PASS" starttime="20240119 10:17:05.913" endtime="20240119 10:17:06.032"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:05.862" endtime="20240119 10:17:06.032"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:05.862" endtime="20240119 10:17:06.032"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:05.861" endtime="20240119 10:17:06.033"/>
+</iter>
+<status status="PASS" starttime="20240119 10:17:05.264" endtime="20240119 10:17:06.033"/>
+</for>
+<status status="PASS" starttime="20240119 10:17:05.263" endtime="20240119 10:17:06.033"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:05.263" endtime="20240119 10:17:06.033"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:05.229" endtime="20240119 10:17:06.033"/>
+</kw>
+<kw name="Fill Select Coverage amount od" library="search_premium_filter_campaign_page">
+<arg>${value.coverage_amount_od}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.coverage_amount_od_header}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:17:06.035" endtime="20240119 10:17:06.065"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.coverage_amount_od_description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:17:06.066" endtime="20240119 10:17:06.090"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.coverage_amount_od_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:06.091" endtime="20240119 10:17:06.132"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.coverage_amount_od_textField}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240119 10:17:06.133" endtime="20240119 10:17:06.205"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.coverage_amount_od_textField}</arg>
+<arg>${value.coverage_amount_od}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:06.207" level="INFO">Typing text '1100000' into text field 'xpath=//input[@formcontrolname="coverage_amount_od"]'.</msg>
+<status status="PASS" starttime="20240119 10:17:06.206" endtime="20240119 10:17:06.407"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:06.034" endtime="20240119 10:17:06.407"/>
+</kw>
+<kw name="Select Repair type" library="search_premium_filter_campaign_page">
+<arg>${value.repair_type}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.repair_type_header}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:17:06.409" endtime="20240119 10:17:06.437"/>
+</kw>
+<if>
+<branch type="IF" condition="'${value.repair_type}' == 'อู่ทั่วไป'">
+<kw name="Fill &amp; Select Special Campaign" library="search_premium_filter_campaign_page">
+<arg>${value.special_campaign}</arg>
+<status status="NOT RUN" starttime="20240119 10:17:06.438" endtime="20240119 10:17:06.438"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.repairType_radioButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:06.439" endtime="20240119 10:17:06.439"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.repairType_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:06.439" endtime="20240119 10:17:06.439"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_special_campaign}</var>
+<arg>${search_premium_filter_campaign_page.special_campaign_label}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:06.440" endtime="20240119 10:17:06.440"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${check_special_campaign}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:06.441" endtime="20240119 10:17:06.441"/>
+</kw>
+<status status="NOT RUN" starttime="20240119 10:17:06.437" endtime="20240119 10:17:06.441"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.repairType_radioButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:06.442" endtime="20240119 10:17:06.483"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.repairType_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:06.485" level="INFO">Clicking element 'xpath=//mat-radio-button[@class="mat-mdc-radio-button mat-primary"]/..//label[contains(text(),'ทั้งหมด')]'.</msg>
+<status status="PASS" starttime="20240119 10:17:06.484" endtime="20240119 10:17:06.608"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:06.441" endtime="20240119 10:17:06.608"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:06.437" endtime="20240119 10:17:06.608"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:06.408" endtime="20240119 10:17:06.608"/>
+</kw>
+<kw name="Select &quot;add/not&quot; and Fill &amp; Select Gross premium code" library="search_premium_filter_campaign_page">
+<arg>${value.gross_code}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${value.gross_code_header}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240119 10:17:06.610" endtime="20240119 10:17:06.641"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Result_gross_code}</var>
+<arg>Should Not Be Empty</arg>
+<arg>${value.gross_code}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${value.gross_code}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20240119 10:17:06.642" level="INFO">Length is 53</msg>
+<status status="PASS" starttime="20240119 10:17:06.642" endtime="20240119 10:17:06.642"/>
+</kw>
+<msg timestamp="20240119 10:17:06.643" level="INFO">${Result_gross_code} = True</msg>
+<status status="PASS" starttime="20240119 10:17:06.641" endtime="20240119 10:17:06.643"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Result_gross_code}' == 'True'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.yes_gross_code_radioButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:06.644" endtime="20240119 10:17:06.683"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.yes_gross_code_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:06.684" level="INFO">Clicking element 'xpath=//mat-label[contains(text(),'รวม พ.ร.บ.')]/..//label[text() = 'รวม']'.</msg>
+<status status="PASS" starttime="20240119 10:17:06.683" endtime="20240119 10:17:06.824"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.gross_code_textField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:06.824" endtime="20240119 10:17:06.872"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.gross_code_textField}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240119 10:17:06.872" endtime="20240119 10:17:06.960"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.gross_code_textField}</arg>
+<arg>${value.gross_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:06.962" level="INFO">Typing text 'รถจักรยานยนต์ - ส่วนบุคคล (เกิน 75 ซีซี ถึง 125 ซีซี)' into text field 'xpath=//input[@formcontrolname="act_mask"]'.</msg>
+<status status="PASS" starttime="20240119 10:17:06.961" endtime="20240119 10:17:07.768"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.gross_code_dropdown}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:07.768" endtime="20240119 10:17:07.819"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.gross_code_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:07.821" level="INFO">Clicking element 'xpath=//span[contains(text(),' รถจักรยานยนต์ - ส่วนบุคคล (เกิน 75 ซีซี ถึง 125 ซีซี) ')]'.</msg>
+<status status="PASS" starttime="20240119 10:17:07.820" endtime="20240119 10:17:07.945"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:06.643" endtime="20240119 10:17:07.945"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.no_gross_code_radioButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:07.946" endtime="20240119 10:17:07.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_premium_filter_campaign_page.no_gross_code_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240119 10:17:07.946" endtime="20240119 10:17:07.947"/>
+</kw>
+<status status="NOT RUN" starttime="20240119 10:17:07.946" endtime="20240119 10:17:07.947"/>
+</branch>
+<status status="PASS" starttime="20240119 10:17:06.643" endtime="20240119 10:17:07.947"/>
+</if>
+<status status="PASS" starttime="20240119 10:17:06.609" endtime="20240119 10:17:07.947"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:04.381" endtime="20240119 10:17:07.947"/>
+</kw>
+<kw name="Click search (normal) and check premium result" library="search_premium_feature">
+<kw name="Get &quot;Car information&quot; after search premium" library="search_premium_filter_campaign_page">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_brand}</var>
+<arg>${search_premium_filter_campaign_page.brand_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:07.997" level="INFO">${get_brand} = FORD</msg>
+<status status="PASS" starttime="20240119 10:17:07.950" endtime="20240119 10:17:07.997"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Brand : ${get_brand}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:07.999" level="INFO">Brand : FORD</msg>
+<status status="PASS" starttime="20240119 10:17:07.998" endtime="20240119 10:17:07.999"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_brand}</arg>
+<arg>${get_brand}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.027" level="INFO">${value.get_brand} = FORD</msg>
+<status status="PASS" starttime="20240119 10:17:07.999" endtime="20240119 10:17:08.028"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_main_model}</var>
+<arg>${search_premium_filter_campaign_page.main_model_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:08.123" level="INFO">${get_main_model} = FORD RANGER</msg>
+<status status="PASS" starttime="20240119 10:17:08.028" endtime="20240119 10:17:08.124"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Main model : ${get_main_model}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:08.125" level="INFO">Main model : FORD RANGER</msg>
+<status status="PASS" starttime="20240119 10:17:08.124" endtime="20240119 10:17:08.125"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_main_model}</arg>
+<arg>${get_main_model}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.158" level="INFO">${value.get_main_model} = FORD RANGER</msg>
+<status status="PASS" starttime="20240119 10:17:08.126" endtime="20240119 10:17:08.158"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_sub_brand}</var>
+<arg>${search_premium_filter_campaign_page.sub_brand_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:08.206" level="INFO">${get_sub_brand} = FORD RANGER DOUBLE CAB 2.2</msg>
+<status status="PASS" starttime="20240119 10:17:08.159" endtime="20240119 10:17:08.206"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Sub brand : ${get_sub_brand}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:08.208" level="INFO">Sub brand : FORD RANGER DOUBLE CAB 2.2</msg>
+<status status="PASS" starttime="20240119 10:17:08.207" endtime="20240119 10:17:08.208"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_sub_brand}</arg>
+<arg>${get_sub_brand}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.242" level="INFO">${value.get_sub_brand} = FORD RANGER DOUBLE CAB 2.2</msg>
+<status status="PASS" starttime="20240119 10:17:08.208" endtime="20240119 10:17:08.242"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_car_year}</var>
+<arg>${search_premium_filter_campaign_page.car_year_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:08.299" level="INFO">${get_car_year} = 2016</msg>
+<status status="PASS" starttime="20240119 10:17:08.242" endtime="20240119 10:17:08.299"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Car year : ${get_car_year}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:08.300" level="INFO">Car year : 2016</msg>
+<status status="PASS" starttime="20240119 10:17:08.300" endtime="20240119 10:17:08.301"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_car_year}</arg>
+<arg>${get_car_year}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.335" level="INFO">${value.get_car_year} = 2016</msg>
+<status status="PASS" starttime="20240119 10:17:08.301" endtime="20240119 10:17:08.335"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_car_type}</var>
+<arg>${search_premium_filter_campaign_page.car_type_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:08.382" level="INFO">${get_car_type} = รถยนต์นั่ง-ส่วนบุคคล</msg>
+<status status="PASS" starttime="20240119 10:17:08.336" endtime="20240119 10:17:08.382"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Car type : ${get_car_type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:08.383" level="INFO">Car type : รถยนต์นั่ง-ส่วนบุคคล</msg>
+<status status="PASS" starttime="20240119 10:17:08.382" endtime="20240119 10:17:08.384"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_car_type}</arg>
+<arg>${get_car_type}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.413" level="INFO">${value.get_car_type} = รถยนต์นั่ง-ส่วนบุคคล</msg>
+<status status="PASS" starttime="20240119 10:17:08.384" endtime="20240119 10:17:08.413"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_car_power}</var>
+<arg>${search_premium_filter_campaign_page.car_power_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:08.452" level="INFO">${get_car_power} = &gt; 2,000 CC (9999)</msg>
+<status status="PASS" starttime="20240119 10:17:08.413" endtime="20240119 10:17:08.452"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Car power : ${get_car_power}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:08.453" level="INFO">Car power : &gt; 2,000 CC (9999)</msg>
+<status status="PASS" starttime="20240119 10:17:08.453" endtime="20240119 10:17:08.453"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_car_power}</arg>
+<arg>${get_car_power}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.479" level="INFO">${value.get_car_power} = &gt; 2,000 CC (9999)</msg>
+<status status="PASS" starttime="20240119 10:17:08.454" endtime="20240119 10:17:08.480"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${get_special_campaign}</var>
+<arg>${search_premium_filter_campaign_page.special_campaign_label}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240119 10:17:08.529" level="INFO">${get_special_campaign} = FORD ENSURE</msg>
+<status status="PASS" starttime="20240119 10:17:08.480" endtime="20240119 10:17:08.529"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Special campaign : ${get_special_campaign}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:17:08.530" level="INFO">Special campaign : FORD ENSURE</msg>
+<status status="PASS" starttime="20240119 10:17:08.529" endtime="20240119 10:17:08.530"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${value.get_special_campaign}</arg>
+<arg>${get_special_campaign}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240119 10:17:08.561" level="INFO">${value.get_special_campaign} = FORD ENSURE</msg>
+<status status="PASS" starttime="20240119 10:17:08.531" endtime="20240119 10:17:08.561"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:07.949" endtime="20240119 10:17:08.561"/>
+</kw>
+<kw name="Wait for process 5s" library="common">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240119 10:17:13.564" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240119 10:17:08.563" endtime="20240119 10:17:13.564"/>
+</kw>
+<status status="PASS" starttime="20240119 10:17:08.561" endtime="20240119 10:17:13.564"/>
+</kw>
+<kw name="Click Search button" library="search_premium_main_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_premium_main_page.search_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240119 10:17:13.565" endtime="20240119 10:17:13.606"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${search_premium_main_page.search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240119 10:17:13.607" level="INFO">Clicking button 'xpath=//button[@class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"]'.</msg>
+<msg timestamp="20240119 10:17:15.112" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240119 10:17:15.112" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button _ngcontent-yhw-c142="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"&gt;...&lt;/button&gt; is not clickable at point (1840, 189). Other element would receive the click: &lt;div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"&gt;&lt;/div&gt;
+  (Session info: chrome=120.0.6099.71)
+Stacktrace:
+	GetHandleVerifier [0x00A772A3+45731]
+	(No symbol) [0x00A02D51]
+	(No symbol) [0x008F880D]
+	(No symbol) [0x009307AB]
+	(No symbol) [0x0092F2AF]
+	(No symbol) [0x0092D89B]
+	(No symbol) [0x0092CBA1]
+	(No symbol) [0x00924FC0]
+	(No symbol) [0x00947FDC]
+	(No symbol) [0x00924A4E]
+	(No symbol) [0x00948254]
+	(No symbol) [0x0095B7A2]
+	(No symbol) [0x00947DD6]
+	(No symbol) [0x009231F6]
+	(No symbol) [0x0092439D]
+	GetHandleVerifier [0x00D80716+3229462]
+	GetHandleVerifier [0x00DC84C8+3523784]
+	GetHandleVerifier [0x00DC214C+3498316]
+	GetHandleVerifier [0x00B01680+611968]
+	(No symbol) [0x00A0CCCC]
+	(No symbol) [0x00A08DF8]
+	(No symbol) [0x00A08F1D]
+	(No symbol) [0x009FB2C7]
+	BaseThreadInitThunk [0x762000C9+25]
+	RtlGetAppContainerNamedObjectPath [0x76F17B4E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F17B1E+238]
+</msg>
+<status status="FAIL" starttime="20240119 10:17:13.606" endtime="20240119 10:17:15.133"/>
+</kw>
+<status status="FAIL" starttime="20240119 10:17:13.564" endtime="20240119 10:17:15.133"/>
+</kw>
+<kw name="Wait for process 10s" library="common">
+<status status="NOT RUN" starttime="20240119 10:17:15.133" endtime="20240119 10:17:15.134"/>
+</kw>
+<kw name="Scroll down to check premium table" library="search_premium_filter_campaign_page">
+<status status="NOT RUN" starttime="20240119 10:17:15.134" endtime="20240119 10:17:15.134"/>
+</kw>
+<kw name="Check found/not found check premium list" library="search_premium_filter_campaign_page">
+<status status="NOT RUN" starttime="20240119 10:17:15.134" endtime="20240119 10:17:15.134"/>
+</kw>
+<status status="FAIL" starttime="20240119 10:17:07.948" endtime="20240119 10:17:15.135"/>
+</kw>
+<kw name="Get &amp; check details in card (Tisco customer)" library="search_premium_feature">
+<status status="NOT RUN" starttime="20240119 10:17:15.135" endtime="20240119 10:17:15.135"/>
+</kw>
+<kw name="Click Save premium history button" library="search_premium_filter_campaign_page">
+<status status="NOT RUN" starttime="20240119 10:17:15.135" endtime="20240119 10:17:15.135"/>
+</kw>
+<kw name="Click save premium history &amp; Get UW code" library="search_premium_feature">
+<status status="NOT RUN" starttime="20240119 10:17:15.136" endtime="20240119 10:17:15.136"/>
+</kw>
+<kw name="Verify All input field are cleaned up" library="search_premium_filter_campaign_page">
+<status status="NOT RUN" starttime="20240119 10:17:15.136" endtime="20240119 10:17:15.136"/>
+</kw>
+<kw name="Click Quotation history tab" library="quotation_history_main_page">
+<status status="NOT RUN" starttime="20240119 10:17:15.137" endtime="20240119 10:17:15.137"/>
+</kw>
+<kw name="Verify &quot;Customer&quot; and &quot;Ref No&quot; in Quotation history table" library="search_premium_feature">
+<status status="NOT RUN" starttime="20240119 10:17:15.137" endtime="20240119 10:17:15.137"/>
+</kw>
+<kw name="Verify matching &quot;UW code &amp; All values&quot; and &quot;Quotation History details&quot; in Premium history" library="quotation_history_main_page">
+<status status="NOT RUN" starttime="20240119 10:17:15.137" endtime="20240119 10:17:15.137"/>
+</kw>
+<status status="FAIL" starttime="20240119 10:16:31.930" endtime="20240119 10:17:15.138"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240119 10:17:15.139" endtime="20240119 10:17:17.987"/>
+</kw>
+<status status="FAIL" starttime="20240119 10:15:36.363" endtime="20240119 10:17:17.987">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button _ngcontent-yhw-c142="" mat-flat-button="" color="primary" class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"&gt;...&lt;/button&gt; is not clickable at point (1840, 189). Other element would receive the click: &lt;div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"&gt;&lt;/div&gt;
+  (Session info: chrome=120.0.6099.71)
+Stacktrace:
+	GetHandleVerifier [0x00A772A3+45731]
+	(No symbol) [0x00A02D51]
+	(No symbol) [0x008F880D]
+	(No symbol) [0x009307AB]
+	(No symbol) [0x0092F2AF]
+	(No symbol) [0x0092D89B]
+	(No symbol) [0x0092CBA1]
+	(No symbol) [0x00924FC0]
+	(No symbol) [0x00947FDC]
+	(No symbol) [0x00924A4E]
+	(No symbol) [0x00948254]
+	(No symbol) [0x0095B7A2]
+	(No symbol) [0x00947DD6]
+	(No symbol) [0x009231F6]
+	(No symbol) [0x0092439D]
+	GetHandleVerifier [0x00D80716+3229462]
+	GetHandleVerifier [0x00DC84C8+3523784]
+	GetHandleVerifier [0x00DC214C+3498316]
+	GetHandleVerifier [0x00B01680+611968]
+	(No symbol) [0x00A0CCCC]
+	(No symbol) [0x00A08DF8]
+	(No symbol) [0x00A08F1D]
+	(No symbol) [0x009FB2C7]
+	BaseThreadInitThunk [0x762000C9+25]
+	RtlGetAppContainerNamedObjectPath [0x76F17B4E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F17B1E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20240119 10:15:27.117" endtime="20240119 10:17:17.996"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Execute Search Premium">Execute Search Premium</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240119 10:15:28.780" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 31: Setting variable '&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD' failed: Invalid variable name '&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD'.</msg>
+<msg timestamp="20240119 10:15:28.782" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 35: Setting variable '======' failed: Invalid variable name '======='.</msg>
+<msg timestamp="20240119 10:15:28.783" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 36: Setting variable '&gt;&gt;&gt;&gt;&gt;&gt;&gt; 25cdc5191d0ab8f9cf8f4838df0ddf432a97e57e' failed: Invalid variable name '&gt;&gt;&gt;&gt;&gt;&gt;&gt; 25cdc5191d0ab8f9cf8f4838df0ddf432a97e57e'.</msg>
+<msg timestamp="20240119 10:15:29.074" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\common.robot' on line 4: Setting variable '${common.app_isp_partner}' failed: Resolving variable '${value.partner_search}' failed: Variable '${value}' not found.</msg>
+<msg timestamp="20240119 10:15:29.164" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_details_page.robot' on line 21: Setting variable '${partner_request_premium_list_details_page.repair_type_dropdown}' failed: Resolving variable '${partner_reply_warranty_input.repair_type}' failed: Variable '${partner_reply_warranty_input}' not found.</msg>
+<msg timestamp="20240119 10:15:29.299" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_details_page.robot' on line 19: Setting variable '${partner_request_premium_list_details_page.special_campaign_dropdown}' failed: Resolving variable '${partner_reply_warranty_input.special_campaign}' failed: Variable '${partner_reply_warranty_input}' not found.</msg>
+<msg timestamp="20240119 10:15:29.423" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 19: Setting variable '${partner_request_premium_list_main_page.day_range_date_button}' failed: Resolving variable '${partner_input_list.start_day_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20240119 10:15:29.581" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 18: Setting variable '${partner_request_premium_list_main_page.end_range_date_button}' failed: Resolving variable '${partner_input_list.end_day_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20240119 10:15:29.727" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 17: Setting variable '${partner_request_premium_list_main_page.month_range_date_button}' failed: Resolving variable '${partner_input_list.month_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20240119 10:15:29.855" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\partner_tab\request_premium_list_tab\partner_request_premium_list_main_page.robot' on line 16: Setting variable '${partner_request_premium_list_main_page.year_range_date_button}' failed: Resolving variable '${partner_input_list.year_range_date}' failed: Variable '${partner_input_list}' not found.</msg>
+<msg timestamp="20240119 10:15:30.012" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 26: Setting variable '${quotation_history_main_page.day_created_date_button}' failed: Resolving variable '${input_quotation.day_created_date}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20240119 10:15:30.105" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 25: Setting variable '${quotation_history_main_page.month_created_date_button}' failed: Resolving variable '${input_quotation.month_created_date}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20240119 10:15:30.198" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 29: Setting variable '${quotation_history_main_page.sale_channel_dropdown}' failed: Resolving variable '${input_quotation.sale_channel}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20240119 10:15:30.302" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\search_premium_info_tab\quotation_history_tab\quotation_history_main_page.robot' on line 24: Setting variable '${quotation_history_main_page.year_created_date_button}' failed: Resolving variable '${input_quotation.year_created_date}' failed: Variable '${input_quotation}' not found.</msg>
+<msg timestamp="20240119 10:15:30.425" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 35: Setting variable '${request_premium_form_fill_page.brand_dropdown}' failed: Resolving variable '${input_form.brand_name}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:30.515" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 65: Setting variable '${request_premium_form_fill_page.car_color_dropdown}' failed: Resolving variable '${input_form.car_color}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:30.634" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 51: Setting variable '${request_premium_form_fill_page.car_power_dropdown}' failed: Resolving variable '${input_form.car_power}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:30.740" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 47: Setting variable '${request_premium_form_fill_page.car_type_dropdown}' failed: Resolving variable '${input_form.car_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:30.939" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 31: Setting variable '${request_premium_form_fill_page.car_year_dropdown}' failed: Resolving variable '${input_form.car_year}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:31.143" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 103: Setting variable '${request_premium_form_fill_page.check_premium_type_radioButton}' failed: Resolving variable '${input_form.check_premium_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:31.385" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 86: Setting variable '${request_premium_form_fill_page.day_campaign_effective_date_button}' failed: Resolving variable '${input_form.day_campaign_effective_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:31.601" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 91: Setting variable '${request_premium_form_fill_page.day_campaign_expire_date_button}' failed: Resolving variable '${input_form.day_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:31.841" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 114: Setting variable '${request_premium_form_fill_page.day_driver1_birthday_button}' failed: Resolving variable '${input_form.day_driver1_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.057" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 117: Setting variable '${request_premium_form_fill_page.day_driver2_birthday_button}' failed: Resolving variable '${input_form.day_driver2_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.216" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 81: Setting variable '${request_premium_form_fill_page.day_old_campaign_expire_date_button}' failed: Resolving variable '${input_form.day_old_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.369" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 122: Setting variable '${request_premium_form_fill_page.discount_percent_selection_box}' failed: Resolving variable '${input_form.discount_percent}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.514" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 39: Setting variable '${request_premium_form_fill_page.main_model_dropdown}' failed: Resolving variable '${input_form.main_model}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.631" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 85: Setting variable '${request_premium_form_fill_page.month_campaign_effective_date_button}' failed: Resolving variable '${input_form.month_campaign_effective_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.738" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 90: Setting variable '${request_premium_form_fill_page.month_campaign_expire_date_button}' failed: Resolving variable '${input_form.month_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:32.889" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 113: Setting variable '${request_premium_form_fill_page.month_driver1_birthday_button}' failed: Resolving variable '${input_form.month_driver1_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.023" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 116: Setting variable '${request_premium_form_fill_page.month_driver2_birthday_button}' failed: Resolving variable '${input_form.month_driver2_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.134" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 80: Setting variable '${request_premium_form_fill_page.month_old_campaign_expire_date_button}' failed: Resolving variable '${input_form.month_old_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.300" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 75: Setting variable '${request_premium_form_fill_page.old_insure_company_dropdown}' failed: Resolving variable '${input_form.old_insure_company}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.473" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 94: Setting variable '${request_premium_form_fill_page.premium_type_dropdown}' failed: Resolving variable '${input_form.premium_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.559" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 130: Setting variable '${request_premium_form_fill_page.question_set_for_new_customer_or_new_dropdown}' failed: Resolving variable '${input_form.question_set_for_new_customer_or_new}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.680" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 135: Setting variable '${request_premium_form_fill_page.question_set_for_renew_dropdown}' failed: Resolving variable '${input_form.question_set_for_renew}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.802" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 100: Setting variable '${request_premium_form_fill_page.repair_type_dropdown}' failed: Resolving variable '${input_form.repair_type}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:33.921" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 68: Setting variable '${request_premium_form_fill_page.sale_channel_dropdown}' failed: Resolving variable '${input_form.sale_channel}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.018" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 60: Setting variable '${request_premium_form_fill_page.special_equipment_radioButton}' failed: Resolving variable '${input_form.special_equipment}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.216" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 43: Setting variable '${request_premium_form_fill_page.sub_brand_dropdown}' failed: Resolving variable '${input_form.sub_brand}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.382" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 84: Setting variable '${request_premium_form_fill_page.year_campaign_effective_date_button}' failed: Resolving variable '${input_form.year_campaign_effective_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.523" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 89: Setting variable '${request_premium_form_fill_page.year_campaign_expire_date_button}' failed: Resolving variable '${input_form.year_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.699" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 112: Setting variable '${request_premium_form_fill_page.year_driver1_birthday_button}' failed: Resolving variable '${input_form.year_driver1_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.861" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 115: Setting variable '${request_premium_form_fill_page.year_driver2_birthday_button}' failed: Resolving variable '${input_form.year_driver2_birthday}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:34.949" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_fill_page.robot' on line 79: Setting variable '${request_premium_form_fill_page.year_old_campaign_expire_date_button}' failed: Resolving variable '${input_form.year_old_campaign_expire_date}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:35.093" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 4: Setting variable '${value_premium_form_main.ExistingCustomer}' failed: Resolving variable '${input_form.App_code}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:35.228" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 22: Setting variable '${request_premium_form_main_page.appCode_account_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20240119 10:15:35.409" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 15: Setting variable '${request_premium_form_main_page.appCode_list}' failed: Resolving variable '${input_form.App_code}' failed: Variable '${input_form}' not found.</msg>
+<msg timestamp="20240119 10:15:35.598" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 23: Setting variable '${request_premium_form_main_page.car_details_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20240119 10:15:35.777" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 21: Setting variable '${request_premium_form_main_page.customer_name_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20240119 10:15:35.951" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 20: Setting variable '${request_premium_form_main_page.existingCustomer_record}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20240119 10:15:36.067" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 24: Setting variable '${request_premium_form_main_page.license_no_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20240119 10:15:36.226" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zatiwit\My Documents\Automate\Premium\keyword\tab\tisco_tab\check_premium_tab\request_premium_tab\request_premium_form_tab\request_premium_form_main_page.robot' on line 25: Setting variable '${request_premium_form_main_page.motor_expiry_date_value_from_table}' failed: Resolving variable '${value_premium_form_main.ExistingCustomer}' failed: Variable '${value_premium_form_main}' not found.</msg>
+<msg timestamp="20240119 10:15:39.384" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python37\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.71); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

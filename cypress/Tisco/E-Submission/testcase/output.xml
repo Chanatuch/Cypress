@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.9 on win32)" generated="20230517 11:17:39.840" rpa="false" schemaversion="3">
+<suite id="s1" name="Form" source="\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\E-Submission\testcase\form.robot">
+<test id="s1-t1" name="Insured" line="6">
+<kw name="Open website" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230517 11:17:41.084" level="INFO">Opening browser 'chrome' to base url 'https://forms.tbeta.co/form/e_submission_phu'.</msg>
+<msg timestamp="20230517 11:17:41.306" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230517 11:17:41.083" endtime="20230517 11:17:52.274"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>${1600}</arg>
+<arg>${1000}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20230517 11:17:52.275" endtime="20230517 11:17:53.259"/>
+</kw>
+<status status="PASS" starttime="20230517 11:17:41.082" endtime="20230517 11:17:53.260"/>
+</kw>
+<kw name="input insured Info" library="Insured-Info_feature">
+<arg>${Insured-Info.input_name}</arg>
+<msg timestamp="20230517 11:17:53.269" level="FAIL">Resolving variable '${Insured-Info.input_name}' failed: Variable '${Insured}' not found. Did you mean:
+    ${Insured-Info}</msg>
+<status status="FAIL" starttime="20230517 11:17:53.265" endtime="20230517 11:17:53.270"/>
+</kw>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="NOT RUN" starttime="20230517 11:17:53.277" endtime="20230517 11:17:53.277"/>
+</kw>
+<status status="FAIL" starttime="20230517 11:17:41.080" endtime="20230517 11:17:53.278">Resolving variable '${Insured-Info.input_name}' failed: Variable '${Insured}' not found. Did you mean:
+    ${Insured-Info}</status>
+</test>
+<status status="FAIL" starttime="20230517 11:17:39.861" endtime="20230517 11:17:53.282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230517 11:17:41.070" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\E-Submission\source\import.robot' on line 14: Resource file '..\keyword\feature\Insurance-Sammary_feature.robot' does not exist.</msg>
+<msg timestamp="20230517 11:17:41.076" level="ERROR">Error in file '\\hovdifssv.tisconet.com\hovdipsm01$\zchanatuch\My Documents\insurance-automate-tester\E-Submission\source\import.robot' on line 25: Resource file '..\keyword\feature\Insurance-Sammary_page.robot' does not exist.</msg>
+</errors>
+</robot>
